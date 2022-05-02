@@ -5,230 +5,19 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="libcss.css">
         <link rel="shortcut icon" href="Assets/favicon.ico">
+        <script src="program.js"></script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Texturina:wght@100&display=swap" rel="stylesheet">
-
-
-        <style>
-            *{
-                margin: 0;
-                padding: 0;
-                /* clear: both; */
-            }
-
-            body{
-                font-family:'Times New Roman', Times, serif;
-            }
-
-            /*=====     Header     =====*/
-
-            .header{
-                width: 100%;
-                height: 100px;
-                position: relative;
-                background-image: url('Assets/bg_header.jpg');
-            }
-
-            .header div{
-                display:inline-block;
-            }
-
-            /*=====     Fish on header     =====*/
-
-            .fish{
-                color:darkblue;
-                font-size: 30px;
-                width: 200px;
-                height: 60px;
-                display: flex;
-                justify-content: center;
-	            align-items: center;
-                background-color:dimgrey;
-                border-radius: 15px;
-                font-style:italic;
-                -webkit-user-select: none;
-                user-select: none;
-            }
-
-            .fish:hover{
-                background-color: bisque;
-                color:chocolate;
-                animation: fishhover 3s ease alternate infinite;
-            }
-
-            .fish:hover .listbox{
-                display:block;
-            }
-
-            @keyframes fishhover{
-                0%{
-                    color: white; background-color:dimgrey;
-                    transform: scale(1);
-                }
-                50%{
-                    background-color: bisque; color:chocolate;
-                    transform: scale(1.1);
-                }
-                100%{
-                    color:aqua; background-color: chartreuse;
-                    transform: scale(1);
-                }
-            }
-
-            /*=====     Menu on header     =====*/
-
-            .menu{
-                position:absolute;
-                width:35%;
-                height:100%;
-                display:flex;
-                justify-items:center;
-                align-items:center;
-                left:260px;
-                top:25px;
-                opacity:80%;
-            }
-
-            .menu ul{
-                list-style-type:none;
-                text-align:center;
-                height:50%;
-                background:linear-gradient(to right,rgb(64, 51, 64),#454545,#454545,rgb(64, 51, 64));
-                opacity:100%;
-                border-radius:10px;
-            }
-
-            .menu ul li{
-                display:inline-block;
-                margin-left: -5px;
-                padding:12px 15px;
-            }
-
-            .menu ul li a{
-                text-decoration:none;
-                font-size:20px;
-                font-weight:50px;
-                text-shadow:4px 4px 1px black;
-                color:rgb(206, 191, 55);
-                font-weight:bold;
-                -webkit-user-select: none;
-                user-select: none;
-            }
-
-            .menu ul li a:hover{
-                color:white;
-                text-shadow:4px 4px 1px rgb(30, 7, 64);
-            }
-
-            .menu ul li a:active{
-                color:rgb(183, 219, 67);
-            }
-
-            /*=====     Body     =====*/
-
-            .middle{
-                width:100%;
-                height:2500px;
-                background:rgb(216, 219, 211);
-                position:relative;
-            }
-
-            /*=====     Menu     =====*/
-
-            .middle .menu---content{
-                position:fixed;
-                top:120px;
-                left:10px;
-                width:300px;
-                height:500px;
-                padding:20px;
-                border-radius:10px;
-                border:1px solid rgb(200, 202, 196);
-                box-sizing:border-box;
-                background:white;
-                opacity:70%;
-                
-            }
-
-            .middle .menu---content .menu___child---content{
-                width:calc(300px - 40px);
-                height:calc(500px - 40px);
-                display:flex;
-                flex-direction:column;
-            }
-
-            .middle .menu---content .menu___child---content ul{
-                padding-left:20px;
-            }
-
-            .middle .menu---content .menu___child---content ul li a{
-                font-size:20px;
-                text-decoration:none;
-                color:rgb(91, 92, 89);
-                -webkit-user-select: none;
-                user-select: none;
-            }
-
-            .middle .menu---content .menu___child---content ul li a:hover{
-                color:black;
-            }
-
-            /*=====     Detail     =====*/
-            .middle .detail{
-                font-size:20px;
-                color:black;
-                width:60%;
-                height:auto;
-                background:white;
-                position:absolute;
-                left:330px;
-                top:20px;
-                padding:20px 30px;
-                border-radius:10px;
-                border:1px solid rgb(200, 202, 196);
-                box-sizing:border-box;
-                background:white;
-                opacity:70%;
-            }
-
-            .middle .detail ul li a{
-                color:rgb(91, 92, 89);
-            }
-
-            .middle .detail ul li a:hover{
-                color:black;
-            }
-        </style>
-
-
     </head>
-
-    <script>
-        function decreaseScaleX(id, time){
-            var doc = document.getElementById(id);
-            doc.style.transform = 'scaleX(50%)';
-            doc.style.transition = time;
-            doc.style.transformOrigin = 'left';
-        }
-
-        function increaseScaleX(id, time){
-            var doc = document.getElementById(id);
-            doc.style.transform = 'scaleX(100%)';
-            doc.style.transition = time;
-        }
-
-    </script>
 
     <body>
         <div class="header">
-            <div class="par" style="display:flex; align-items:center; padding-left: 20px; height:100%; width:20%;">
-                <h3 id="test" class="fish" onmouseover="decreaseScaleX('menubox', '3s')" onmouseleave="increaseScaleX('menubox', '2s');">Cá xập xình</h3>
-            </div>
+            <img src="Assets/skeleton.png" class="skeleton" onmouseover="decreaseScaleX('menubox', '3s')" onmouseleave="increaseScaleX('menubox', '2s');" style="width:70px; height:70px;">
 
             <div class="menu">
-                <ul id="menubox" class="listbox">
+                <ul id="menubox">
                     <li><a href="#">Diễn đàn</a></li>
                     <li><a href="#">Bài đăng</a></li>
                     <li><a href="#">Học tập</a></li>
@@ -258,9 +47,9 @@
             </div>
 
             <div class="detail">
-                <h1 style="padding-left:20px;">Lời nói đầu</h1>
+                <h1>Lời nói đầu</h1>
                 <h3 style="width:90px; border-left:2px solid black; padding-left:10px; background:rgb(159, 162, 153);">Mục lục</h3>
-                <ul style="padding-left:20px;">
+                <ul id="tableOfContents" style="padding-left:20px;">
                     <li><a href="#gioithieu">Giới thiệu</a></li>
                     <li><a href="#kienthuc">Kiến thức cần có</a></li>
                     <li><a href="#chude">Chủ đề liên quan</a></li>
@@ -334,7 +123,7 @@
                     <p>
                         - Cây nhị phân tìm kiếm có lẽ là cấu trúc dữ liệu dạng cây đầu tiên khi được học môn <b>Cấu trúc dữ liệu và giải thuật</b>.
                         Mỗi nút của cây nhị phân có nhiều nhất hai nút con, hoặc không có nút con nào, đây là dạng cây hai nhánh.
-                        Một số biến thể của cây nhị phân tìm kiếm là <i>cây AVL, cây đỏ đen, cây Splay, ... .</i>
+                        Một số biến thể của cây nhị phân tìm kiếm là <i>cây AVL, cây đỏ đen, cây Splay, ... .</i><br>
                         Cây nhiều nhánh là dạng cây tổng quát, ở mỗi nút có thể có nhiều nhánh, nó còn được gọi là B cây ( <b>B Tree</b> ).
                         B Tree có nhiều biến thể như Cây 2-3-4, B Tree, B* Tree, B+ Tree, ... .<br>
                         Trong thư viện này chỉ đề cập đến B+ Tree, một là vì tốc độ truy cập trên nó, hai là vì B+ Tree cho phép duyệt tuyến tính một cách dễ dàng trên các nút lá.
