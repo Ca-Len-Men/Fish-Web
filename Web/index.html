@@ -4,7 +4,7 @@
         <title>Fish Programing</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="libcss.css">
-        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="shortcut icon" href="Assets/favicon.ico">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
                 width: 100%;
                 height: 100px;
                 position: relative;
-                background-image: url('Assets/1051443.jpg');
+                background-image: url('Assets/bg_header.jpg');
             }
 
             .header div{
@@ -130,7 +130,7 @@
 
             .middle{
                 width:100%;
-                height:750px;
+                height:2500px;
                 background:rgb(216, 219, 211);
                 position:relative;
             }
@@ -286,7 +286,68 @@
                     <p>
                         - Nói về các Cấu trúc dữ liệu tất nhiên không thể thiếu về phần <i>mảng một chiều</i>.
                         Mảng một chiều đa số có lẽ là một Cấu trúc dữ liệu đầu tiên mà mọi người được học khi mới bắt đầu học lập trình.
-                        Đây là một Cấu trúc dữ liệu cơ bản nhất, dễ quản lí nhất, truy cập các phần tử với tốc độ là hằng số.
+                        Đây là một Cấu trúc dữ liệu cơ bản nhất, dễ quản lí và truy cập các phần tử với tốc độ là hằng số.
+                        Hiện nay cũng đã có rất nhiều thuật toán mạnh mẽ và nhanh nhẹn để giải quyết một số vấn đề cơ bản trên mảng một chiều như tìm kiếm, sắp xếp, ... .
+                        Vì vậy mảng một chiều là lựa chọn tốt để sử dụng để quản lí dữ liệu.
+                    </p>
+
+                    <li><b>Danh sách liên kết</b></li>
+                    <p>
+                        - Danh sách liên kết là Cấu trúc dữ liệu đầu tiên khi chúng ta được học môn <b>Cấu trúc dữ liệu và Giải thuật</b>.
+                        Đây là cấu trúc dữ liệu cơ bản, là nền tảng để học lên các cấu trúc dữ liệu phức tạp như <i>Cây nhị phân tìm kiếm</i>, <i>Cây Trie</i>, ... .
+                        Việc chèn phần tử vào danh sách liên kết với tốc độ là hằng số giúp cấu trúc dữ liệu này là lựa chọn tốt để sự dụng để quản lí dữ liệu.
+                        Tuy nhiên thư viện này sẽ chỉ đề cập đến <i>Danh sách liên kết đôi</i>, bỏ qua phần <i>Danh sách liên kết đơn</i> vì nó có những sự hạn chế nhất định.
+                    </p>
+
+                    <li><b>Ngăn xếp</b></li>
+                    <p>
+                        - Ngăn xếp ( <b>Stack</b> ) là một danh sách liên kết bị hạn chế.
+                        Ngăn xếp làm việc theo nguyên lí <i>vào sau ra trước</i> <b>LIFO</b> ( Last In First Out ).
+                        Thường được sử dụng để thực hiện khử đệ quy, chuyển biểu thức sang trung tố, hậu tố, duyệt đồ thị theo chiều sâu, ... .
+                    </p>
+
+                    <li><b>Hàng đợi</b></li>
+                    <p>
+                        - Hàng đợi ( <b>Queue</b> ) là một danh sách liên kết bị hạn chế.
+                        Hàng đợi làm việc theo nguyên lí <i>vào trước ra trước</i> <b>FIFO</b> ( First In First Out ).
+                        Thường được sử dụng để thực hiện duyệt đồ thị theo chiều rộng, nguyên tắc xếp hàng như hàng vào trước sẽ được xử lí trước, ... .
+                    </p>
+
+                    <li><b>Heap</b></li>
+                    <p>
+                        - Heap là một cấu trúc dữ liệu cho phép lấy ra các phần tử lớn nhất, nhỏ nhất bên trong nó với tốc độ xấp xỉ hằng số.
+                        Heap có thể được xây dựng bằng mảng một chiều, cây nhị phân, cây tam phân, ... .
+                        Ở thư viện này sẽ đề cập đến cả hai cách xây dựng Heap sử dụng mảng một chiều và cây nhị phân.
+                        Thuật toán sắp xếp Heap Sort được dựa trên nguyên lí làm việc của Heap.
+                        Heap được ứng dụng trong thuật toán Dijkstra trên đồ thị, ... .
+                    </p>
+
+                    <li><b>Cây Trie</b></li>
+                    <p>
+                        - Cây Trie là một cấu trúc dữ liệu lưu trữ với mỗi phần tử gồm một cặp khóa và giá trị ( key - value ).
+                        Khóa này là một chuỗi ký tự, mỗi ký tự được lưu trên một nút của cây Trie, nút chứa ký tự cuối cùng sẽ chứa giá trị của một phần tử.
+                        Tốc độ truy cập của cây Trie nhanh hơn nhiều so với sử dụng <i>cây nhị phân</i> hay <i>cây nhiều nhánh</i>, tốc độ đó xấp xỉ tuyến tính độ dài của một chuỗi.
+                        Đổi lại cây Trie tốn nhiều không gian bộ nhớ hơn.
+                    </p>
+
+                    <li><b>Cây tìm kiếm</b></li>
+                    <p>
+                        - Cây nhị phân tìm kiếm có lẽ là cấu trúc dữ liệu dạng cây đầu tiên khi được học môn <b>Cấu trúc dữ liệu và giải thuật</b>.
+                        Mỗi nút của cây nhị phân có nhiều nhất hai nút con, hoặc không có nút con nào, đây là dạng cây hai nhánh.
+                        Một số biến thể của cây nhị phân tìm kiếm là <i>cây AVL, cây đỏ đen, cây Splay, ... .</i>
+                        Cây nhiều nhánh là dạng cây tổng quát, ở mỗi nút có thể có nhiều nhánh, nó còn được gọi là B cây ( <b>B Tree</b> ).
+                        B Tree có nhiều biến thể như Cây 2-3-4, B Tree, B* Tree, B+ Tree, ... .<br>
+                        Trong thư viện này chỉ đề cập đến B+ Tree, một là vì tốc độ truy cập trên nó, hai là vì B+ Tree cho phép duyệt tuyến tính một cách dễ dàng trên các nút lá.
+                        B Tree được sử dụng trên nhiều Cơ sở dữ liệu, ứng dụng trong các thuật toán vét cạn trò chơi, các môn đối kháng trí tuệ, ... .
+                    </p>
+
+                    <li><b>Bảng băm</b></li>
+                    <p>
+                        - Bảng băm ( <b>Hash Table</b> ) là một cấu trúc dữ liệu mạnh mẽ, thường lưu trữ mỗi phần tử là một cặp khóa và giá trị ( key - value ).
+                        Cách lưu trữ của nó giống với mảng một chiều, tuy nhiên cách truy cập dữ liệu của nó rất đặc biệt.
+                        Từ một khóa cho trước, thông qua một hoặc nhiều hàm băm ( Hash Function ), ta sẽ biết được giá trị tương ứng được lưu trữ ở vị trí nào trên bảng băm.
+                        Do đó, tốc độ của bảng băm còn phụ thuộc vào việc chọn hàm băm sao cho phù hợp với kiểu dữ liệu của khóa.
+                        Bảng băm luôn là lựa chọn hàng đầu trong việc lưu mật khẩu người dùng, thường khóa của bảng băm sẽ là một chuỗi ký tự.
                     </p>
                 </ul>
             </div>
