@@ -69,7 +69,8 @@ body{
 	text-align:center;
 	width:100%;
 	height:50%;
-	background:linear-gradient(to right,rgb(64, 51, 64),#454545,#454545,rgb(64, 51, 64));
+	background:linear-gradient(to right,rgb(46, 27, 46),rgb(86, 38, 86),rgb(91, 69, 139),rgb(87, 83, 87),rgb(124, 114, 124));
+	/*linear-gradient(to right,rgb(64, 51, 64),#454545,#454545,rgb(64, 51, 64));*/
 	opacity:100%;
 	border-radius:10px;
 }
@@ -97,15 +98,15 @@ body{
 }
 
 .menu ul li a:active{
-	color:rgb(183, 219, 67);
+	color:rgb(221, 255, 0);
 }
 
 /*=====     Body     =====*/
 
 .middle{
 	width:100%;
-	height:2500px;
-	background:rgb(216, 219, 211);
+	background:linear-gradient(to right,rgb(214, 214, 211),rgb(192, 206, 165),rgb(193, 166, 144));
+	/* rgb(216, 219, 211); */
 	position:relative;
 }
 
@@ -167,10 +168,28 @@ body{
 	opacity:70%;
 }
 
+.middle .detail p{
+	font-size:18px;
+}
+
 .middle .detail #tableOfContents li a{
 	color:rgb(91, 92, 89);
 }
 
 .middle .detail #tableOfContents li a:hover{
 	color:black;
+}
+
+/* Picture in Detail */
+.pictures{
+	width:100%;
+	height:auto;
+	display:flex;
+	align-items:center;
+	flex-direction:column;
+}
+
+.pictures .pic{
+	max-width:55%;
+	height:auto;
 }
