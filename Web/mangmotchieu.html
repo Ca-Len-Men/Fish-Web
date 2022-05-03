@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Fish Programing</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="libcss.css">
+        <link rel="shortcut icon" href="Assets/favicon.ico">
+        <script src="program.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Texturina:wght@100&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="header">
+            <img src="Assets/skeleton.png" class="skeleton" onmouseover="decreaseScaleX('menubox', '3s')" onmouseleave="increaseScaleX('menubox', '2s');" style="width:70px; height:70px;">
+
+            <div class="menu">
+                <ul id="menubox">
+                    <li><a href="#">Diễn đàn</a></li>
+                    <li><a href="#">Bài đăng</a></li>
+                    <li><a href="#">Học tập</a></li>
+                    <li><a href="#">Sự kiện</a></li>
+                    <li><a href="#">Cửa hàng</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="middle" style="font-family: 'Texturina', serif; height:2500px;">
+            <div class="menu---content">
+                <div class="menu___child---content" >
+                    <h2>Thư viện về Cấu trúc dữ liệu</h2>
+                    <ul>
+                        <li><a href="index.html">Lời nói đầu</a></li>
+                        <li><a href="#mangdong">Mảng động</a></li>
+                        <li><a href="#">Danh sách liên kết đôi</a></li>
+                        <li><a href="#">Ngăn xếp</a></li>
+                        <li><a href="#">Hàng đợi</a></li>
+                        <li><a href="#">Heap sử dụng mảng tĩnh</a></li>
+                        <li><a href="#">Heap sử dụng cây nhị phân</a></li>
+                        <li><a href="#">Cây Trie</a></li>
+                        <li><a href="#">Cây B-Plus</a></li>
+                        <li><a href="#">Bảng băm</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="detail">
+                <h1 id="mangdong">Mảng động</h1>
+                <h3 style="width:90px; border-left:2px solid black; padding-left:10px; background:rgb(159, 162, 153);">Mục lục</h3>
+                <ul id="tableOfContents" style="padding-left:20px;">
+                    <li><a href="#gioithieu">Giới thiệu về mảng một chiều</a></li>
+                    <li><a href="#cautruc">Cấu trúc mới của mảng</a></li>
+                    <li><a href="#vande">Vấn đề</a></li>
+                    <li><a href="#giaiphap">Giải pháp</a></li>
+                </ul>
+
+                <h3 id="gioithieu" style="margin-top:20px; border-top:2px solid black;">Giới thiệu về mảng một chiều</h3>
+                <p>
+                    Mảng một chiều gồm một tập hợp dãy các phần tử liên tiếp nhau trên không gian bộ nhớ.
+                    Là một cấu trúc dữ liệu đầu tiên được dạy khi mới bắt đầu học lập trình, nên có lẽ không còn xa lạ gì nữa.
+                    Phần tử đầu tiên của mảng có vị trí bắt đầu bằng 0.<br>
+                    
+                    <div class="pictures">
+                        <img class="pic" src="Assets/ex1.png">
+                        <p style="font-size:15px;">Mảng một chiều</p>
+                    </div>
+
+                    <b>Mảng tĩnh</b> là mảng một chiều có độ dài là hằng số.
+                    Khi ta cấp phát mảng tĩnh với độ dài bất kỳ, độ dài đó sẽ không thay đổi trong xuyên suốt vòng đời của nó và nó sẽ được tự động giải phóng bởi chương trình.<br>
+                    <b>Mảng động</b> là mảng một chiều được cấp phát với độ dài chưa biết.
+                    Trước đó khi ta đã cấp phát một mảng động và nó đã đầy, muốn thêm một phần tử thêm nữa thì ta sẽ cấp phát mảng động thứ hai và di dời các phần tử sang, sau đó giải phóng mảng cũ.
+                    Với phương pháp này ta sẽ có thể tạo một cấu trúc mảng tự co giãn, việc này sẽ làm thuận tiện hơn khi sử dụng mảng một chiều.<br>
+                    Trong thư viện này chúng ta sẽ chỉ xây dựng về mảng động vì tính tự co giãn độ dài mảng của nó.
+                </p>
+
+                <h3 id="vande" style="margin-top:20px; border-top:2px solid black;">Vấn đề</h3>
+                <p>
+                    Mảng động ở đây sẽ được xây dựng chung cho mọi đối tượng, ví dụ như mảng số nguyên, số thực, sinh viên, số phức, ... .
+                    Vì vậy chúng ta hãy xem mỗi phần tử là một kiểu dữ liệu chung chung, chưa biết rõ bên trong nó có những gì.<br>
+                    Thường các bạn sẽ khai báo một mảng n phần tử, chúng ta sẽ cùng phân tích việc sử dụng mảng đó như thế nào, liệu nó có hiệu quả hay không.<br>
+                    Trên mảng một chiều có các thao tác cơ bản để quản lý dữ liệu như : thêm, xóa, sửa, tìm kiếm, sắp xếp, ... .
+                    Hãy tỉ mỉ xem xét các thao tác trên, đa số cần phải sử dụng phép gán cho kiểu dữ liệu chưa biết đó.
+                    Như việc thêm phần tử vào vị trí giữa, ta cần dời một dãy phần tử lùi về một ô, công việc này cần nhiều phép gán.
+                    Với việc sắp xếp các phần tử, đa số chúng ta cần hoán vị hai phần tử với nhau, như vậy công việc hoán vị cũng cần có phép gán.<br>
+                    - <b>Vấn đề thứ nhất</b>, giả sử kiểu dữ liệu đó là kiểu sinh viên, như vậy để gán bằng cho kiểu dữ liệu sinh viên, người dùng sẽ phải tự viết toán tử gán cho lớp sinh viên đó.<br>
+                    - <b>Vấn đề thứ hai</b>, một số thao tác cần thực hiện gán nhiều lần như thêm, xóa và sắp xếp.
+                    Chúng ta sẽ thử bàn về hiệu năng của hàm sắp xếp : bên trong nó đa số sẽ sử dụng hoán vị, hoặc phép chèn như thuật toán Insertion Sort cũng đều thông qua phép gán.
+                    Như vậy đối với mỗi kiểu dữ liệu khác nhau, tùy vào độ lớn của nó mà tốc độ sẽ nhanh hơn hay chậm hơn.
+                    Ví dụ sắp xếp một mảng số nguyên ( mỗi số nguyên là 4 bytes ) đem so với sắp xếp một mảng sinh viên ( mỗi sinh viên thường sẽ hơn 100 bytes ) chênh lệnh độ lớn của kiểu dữ liệu là hơn gấp chục lần, nên tốc độ cũng sẽ chậm hơn gấp chục lần.
+                    Vì vậy vấn đề thứ hai là tốc độ của các thao tác lại tùy thuộc vào kiểu dữ liệu.<br>
+                    - <b>Vấn đề thứ ba</b>, đối với một kiểu dữ liệu lớn như kiểu sinh viên, giả sử khi ta đang lưu trữ một triệu sinh viên ( mỗi sinh viên cho là 1000 bytes ), vì mảng liên tiếp nên ta đang dùng một đoạn rất dài trong không gian ô nhớ là 1000 x 1 triệu bytes.
+                    Thường như vậy ta sẽ không thể khai thác hết được bộ nhớ của máy tính, vì dãy ô nhớ đó có thể lớn hơn.<br>
+                    - Như vậy, chúng ta đã tìm ra ba vấn đề : bắt người dùng tự viết toán tử gán, tốc độ tỉ lệ nghịch với độ lớn kiểu dữ liệu, không gian bộ nhớ quá dài.
+                </p>
+
+                <h3 id="giaiphap" style="margin-top:20px; border-top:2px solid black;">Giải pháp</h3>
+                <p>
+                    Để giải quyết tốt các vấn đề trên, chúng ta sẽ không dùng mảng thường gồm n phần tử, thay vào đó, chúng ta sẽ cần một mảng các con trỏ, mỗi con trỏ liên kết với một phần tử.
+                    Những vị trí trống chưa có phần tử nào, con trỏ đó sẽ được gán giá trị <b>null</b> cho nó.
+
+                    <div class="pictures">
+                        <img class="pic" src="Assets/ex2.png">
+                        <p>Mảng một chiều mới</p>
+                    </div>
+
+                    Giả sử với việc hoán vị hai phần tử, ta chỉ cần hoán vị hai con trỏ, như vậy hai phần tử sẽ đổi chỗ cho nhau, và tốc độ gán hai con trỏ cũng như gán hai biến kiểu int với nhau.
+                    Như vậy các thao tác trên mảng có tốc độ không đổi, bất chấp kiểu dữ liệu có lớn hơn đi nữa.
+
+                    <div class="pictures">
+                        <img class="pic" src="Assets/ex3.png">
+                        <p>Hoán vị hai vị trí 0 và 2</p>
+                    </div>
+
+                    Như vậy vấn đề về phép gán đã được giải quyết, chúng ta sẽ không gán hai kiểu dữ liệu cho nhau mà sẽ gán hai con trỏ, vì vậy người dùng sẽ không cần viết toán tử gán.
+                    Với một dãy con trỏ ( thường con trỏ là 4 bytes ), giả sử mảng gồm một triệu phần tử, độ dài của dãy con trỏ chỉ gồm 4 x 1 triệu bytes, còn các phần tử sẽ nằm rời rạc trong bộ nhớ.
+                    Ở các vị trí không có phần tử, con trỏ đó sẽ mang giá trị <b>null</b>, như thế sẽ tránh sử dụng dư thừa tài nguyên.
+                </p>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
