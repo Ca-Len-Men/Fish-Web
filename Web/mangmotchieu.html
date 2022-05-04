@@ -5,7 +5,11 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="libcss.css">
         <link rel="shortcut icon" href="Assets/favicon.ico">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ace.js" type="text/javascript" charset="utf-8"></script>
         <script src="program.js"></script>
+
+        
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +31,7 @@
             </div>
         </div>
 
-        <div class="middle" style="font-family: 'Texturina', serif; height:2500px;">
+        <div class="middle" style="font-family: 'Texturina', serif; height:6500px;">
             <div class="menu---content">
                 <div class="menu___child---content" >
                     <h2>Thư viện về Cấu trúc dữ liệu</h2>
@@ -54,6 +58,9 @@
                     <li><a href="#cautruc">Cấu trúc mới của mảng</a></li>
                     <li><a href="#vande">Vấn đề</a></li>
                     <li><a href="#giaiphap">Giải pháp</a></li>
+                    <li><a href="#arraylist">Array List</a></li>
+                    <li><a href="#khoitao">Khởi tạo</a></li>
+                    <li><a href="#hamhuy">Hàm hủy</a></li>
                 </ul>
 
                 <h3 id="gioithieu" style="margin-top:20px; border-top:2px solid black;">Giới thiệu về mảng một chiều</h3>
@@ -77,10 +84,10 @@
 
                 <h3 id="vande" style="margin-top:20px; border-top:2px solid black;">Vấn đề</h3>
                 <p>
-                    Mảng động ở đây sẽ được xây dựng chung cho mọi đối tượng, ví dụ như mảng số nguyên, số thực, sinh viên, số phức, ... .
+                    Mảng động ở đây sẽ được xây dựng chung cho mọi đối tượng, ví dụ như mảng số nguyên, số thực, sinh viên, số phức,... .
                     Vì vậy chúng ta hãy xem mỗi phần tử là một kiểu dữ liệu chung chung, chưa biết rõ bên trong nó có những gì.<br>
                     Thường các bạn sẽ khai báo một mảng n phần tử, chúng ta sẽ cùng phân tích việc sử dụng mảng đó như thế nào, liệu nó có hiệu quả hay không.<br>
-                    Trên mảng một chiều có các thao tác cơ bản để quản lý dữ liệu như : thêm, xóa, sửa, tìm kiếm, sắp xếp, ... .
+                    Trên mảng một chiều có các thao tác cơ bản để quản lý dữ liệu như : thêm, xóa, sửa, tìm kiếm, sắp xếp,... .
                     Hãy tỉ mỉ xem xét các thao tác trên, đa số cần phải sử dụng phép gán cho kiểu dữ liệu chưa biết đó.
                     Như việc thêm phần tử vào vị trí giữa, ta cần dời một dãy phần tử lùi về một ô, công việc này cần nhiều phép gán.
                     Với việc sắp xếp các phần tử, đa số chúng ta cần hoán vị hai phần tử với nhau, như vậy công việc hoán vị cũng cần có phép gán.<br>
@@ -117,8 +124,170 @@
                     Với một dãy con trỏ ( thường con trỏ là 4 bytes ), giả sử mảng gồm một triệu phần tử, độ dài của dãy con trỏ chỉ gồm 4 x 1 triệu bytes, còn các phần tử sẽ nằm rời rạc trong bộ nhớ.
                     Ở các vị trí không có phần tử, con trỏ đó sẽ mang giá trị <b>null</b>, như thế sẽ tránh sử dụng dư thừa tài nguyên.
                 </p>
+
+                <h3 id="arraylist" style="margin-top:20px; border-top:2px solid black;">Array List</h3>
+                <p>
+                    Như vậy chúng ta đã có giải pháp để xây dựng cấu trúc một mảng động hiệu quả.
+                    Chúng ta sẽ bắt tay vào xây dựng cấu trúc mảng động và đặt tên nó là Array List.<br>
+                    Ở phần này chúng ta cần có các kiến thức về :<br>
+                    - Array List được xây dựng cho mọi kiểu dữ liệu, ta sẽ sử dụng template trong C++.<br>
+                    - Sử dụng lập trình hướng đối tượng trong C++ thay vì hướng thủ tục trong C.<br>
+                    - Các kiến thức về lập trình hướng đối tượng : khởi tạo, hủy, phương thức, move segmantic, toán tử, functor,... .
+                    Nếu bạn chưa được học về lập trình hướng đối tượng thì cũng không sao, chúng ta sẽ học từ từ.<br>
+                    Quy ước : với capacity là giới hạn mảng chứa được, khi mảng đã đạt giới hạn ( full capacity ), ta sẽ nâng gấp đôi không gian cho nó, như vậy khi số phần tử bằng một nửa capacity, ta sẽ giảm gấp đôi không gian.<br>
+                    <b>Lưu ý</b> : người dùng sẽ phải tự viết hàm khởi tạo sao chép cho kiểu dữ liệu họ tạo ra nếu muốn sử dụng thư viện này.
+                    Chúng ta sẽ bắt đầu tạo một lớp arraylist và các thuộc tính của nó.
+
+                    <div class="scripts"><p id="editor1">template &lt;class data&gt;
+class arraylist{
+private:
+    data** ptr;
+    size_t capacity;
+    size_t size;
+};</p></div>
+
+                    Trong đó các thuộc tính :<br>
+                    - ptr : con trỏ cấp hai quản lý mảng con trỏ cấp một.<br>
+                    - size : số lượng phần tử trong mảng.<br>
+                    - capacity : giới hạn lưu trữ của mảng.<br>
+                </p>
+                <h3 id="khoitao" style="margin-top:20px; border-top:2px solid black;">Khởi tạo</h3>
+                <p>
+                    - Đối với hàm khởi tạo mặc định : gán capacity mặc định là giá trị 20, mảng hiện đang rỗng nên các con trỏ đều mang giá trị <b>nullptr</b>.<br>
+                    Độ phức tạp thời gian là O(1).
+                    <div class="scripts"><p id="editor2">arraylist() : size { 0 }, capacity{ 20 }
+{
+    this->ptr = new data * [this->capacity];
+    for(size_t i = 0; i < this->capacity; ++i)
+        this->ptr[i] = nullptr;
+}
+
+/*Cách gọi*/
+void main()
+{
+    arraylist&lt;int&gt; arr;   //Tạo mảng rỗng
+}</p></div>
+
+                    - Đối với hàm khởi tạo sao chép từ một mảng tĩnh có kiểu dữ liệu <b>data[n]</b> với độ dài n chưa biết, ta sử dụng thêm template để nó tự nhận biến độ dài của mảng này.
+                    Với cách khởi tạo này ta cho capacity của mảng bằng với n.<br>
+                    Độ phức tạp thời gian là O(n).
+
+                    <div class="scripts"><p id="editor3">template &lt;int n&gt;
+arraylist(data (&arr)[n]) : size{ n }, capacity{ n }
+{
+    this->ptr = new data * [n];
+    for(size_t i = 0; i &lt; this->capacity; ++i)
+        this->ptr[i] = new data(arr[i]);
+}
+
+/*Cách gọi*/
+void main()
+{
+    int a[5]{1, 3, 7, 2, 4};
+    arraylist&lt;int&gt; arr(a);   //Tạo mảng từ mảng khác
+}</p></div>
+
+                    - Khởi tạo sao chép từ initializer_list của C++, khai báo thêm thư viện &lt;initializer_list&gt;.
+                    Sử dụng hai phương thức size() để lấy số phần tử và begin() để trỏ vào phần tử đầu tiên, gán capacity bằng với số phần tử trong đó.<br>
+                    Độ phức tạp thời gian là O(n).
+
+                    <div class="scripts"><p id="editor4">#include&lt;initializer_list&gt;
+arraylist(std::initializer_list&lt;data&gt; list) :
+    size{ list.size() }, capacity{ list.size() }
+{
+    this->ptr = new data * [this->capacity];
+
+    const data* pointer = list.begin();
+    for(size_t i = 0; i &lt; this->capacity; ++i)
+        this->ptr[i] = new data(pointer[i]);
+}
+
+/*Cách gọi*/
+void main()
+{
+    arraylist&lt;int&gt; arr({1, 3, 7, 2, 4});   //Tạo mảng từ initializer_list
+}</p></div>
+
+                    - Hàm khởi tạo sao chép, sao chép tài nguyên từ đối tượng nguồn.
+                    Để ý rằng nửa đoạn [size, capacity) sẽ không có phần tử, nên ta sẽ gán bằng giá trị <b>nullptr</b>.<br>
+                    Độ phức tạp thời gian là O(n).
+                    <div class="scripts"><p id="editor5">arraylist(const arraylist& source) :
+    size{ source.size }, capacity{ source.capacity }
+{
+    this->ptr = new data * [this->capacity];
+
+    for(size_t i = 0; i &lt; this->size; ++i)
+        this->ptr[i] = new data(*source.ptr[i]);
+    for(size_t i = this->size; i < this->capacity; ++i)
+        this->ptr[i] = nullptr;
+}
+
+/*Cách gọi*/
+void main()
+{
+    arraylist&lt;int&gt; source({1, 3, 7, 2, 4});
+    arraylist&lt;int&gt; arr(source);   //Khởi tạo sao chép từ source
+}</p></div>
+
+                    - Hàm khởi tạo chuyển đổi tài nguyên ( move segmantic ) : được gọi khi đối tượng lấy làm tham số có vòng đời ngắn, sẽ bị giải phóng sau khi ra khỏi hàm, ta sẽ thực hiện chuyển đổi dữ liệu thay vì sao chép lại tất cả.
+                    Điều đó làm giảm đáng kể những thao tác dư thừa, giúp tốc độ của chương trình nhanh hơn. Có thể hiểu ta sẽ thực hiện hoán vị hai mảng.<br>
+                    Thường có độ phức tạp thời gian là O(1).
+
+                    <div class="scripts"><p id="editor6">arraylist(arraylist&& source) noexcept :
+    size{ source.size }, capacity{ source.capacity }
+{
+    this->ptr = source.ptr;
+    source.ptr = nullptr;
+}
+
+/*Cách gọi*/
+void main()
+{
+    //Tạo mảng từ đối tượng có vòng đời ngắn ( giá trị rvalue )
+    arraylist&lt;int&gt; arr(arraylist&lt;int&gt;({2, 5, 5, 1, 6}));
+}</p></div>
+
+                    Trong đó, source là đối tượng nguồn, do vòng đời ngắn nên sẽ được giải phóng ngay sau khi ra khỏi hàm, thay vì tạo mới cả mảng, ta sẽ lấy luôn dữ liệu mà source đang giữ.
+                </p>
+
+                <h3 id="hamhuy" style="margin-top:20px; border-top:2px solid black;">Hàm hủy</h3>
+                <p>
+                    - Hàm hủy được dùng để giải phóng tài nguyên, tự động được gọi khi đối tượng bị giải phóng.
+
+                    <div class="scripts"><p id="editor7">~arraylist()
+{
+    if(this->ptr == nullptr)
+        return;
+    
+    for(size_t i = 0; i < this->size; ++i)
+        delete this->ptr[i];
+    delete[] this->ptr;
+}
+
+/*Cách gọi*/
+void main()
+{
+    //Tạo mảng từ đối tượng có vòng đời ngắn ( giá trị rvalue )
+    arraylist&lt;int&gt; arr(arraylist&lt;int&gt;({2, 5, 5, 1, 6}));
+}</p></div>
+                    Đầu tiên ta giải phóng các phần tử trong nửa đoạn [0, size), sau đó mới giải phóng mảng con trỏ.
+                    Hãy để ý hàm khởi tạo chuyển đổi tài nguyên, ta gán source.ptr bằng giá trị <b>nullptr</b>, vì thế phải kiểm tra ptr có null không rồi mới đi giải phóng.
+                </p>
+
                 </ul>
             </div>
         </div>
+
+
+        
+        <script>
+            setEditor('editor1', '400px', '160px');
+            setEditor('editor2', '520px', '280px');
+            setEditor('editor3', '600px', '310px');
+            setEditor('editor4', '800px', '350px');
+            setEditor('editor5', '720px', '375px');
+            setEditor('editor6', '720px', '290px');
+            setEditor('editor7', '720px', '350px');
+        </script>
     </body>
 </html>
