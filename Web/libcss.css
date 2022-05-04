@@ -123,7 +123,7 @@ body{
 	border:1px solid rgb(200, 202, 196);
 	box-sizing:border-box;
 	background:white;
-	opacity:70%;
+	opacity:75%;
 	
 }
 
@@ -153,7 +153,7 @@ body{
 /*=====     Detail     =====*/
 .middle .detail{
 	font-size:20px;
-	color:black;
+	/* color:black; */
 	width:60%;
 	height:auto;
 	background:white;
@@ -165,7 +165,7 @@ body{
 	border:1px solid rgb(200, 202, 196);
 	box-sizing:border-box;
 	background:white;
-	opacity:70%;
+	opacity:75%;
 }
 
 .middle .detail p{
@@ -192,4 +192,13 @@ body{
 .pictures .pic{
 	max-width:55%;
 	height:auto;
+}
+
+/* Script in Detail */
+.scripts{
+	width:100%;
+	height:auto;
+	display:flex;
+	align-items:center;
+	flex-direction:column;
 }
