@@ -5,11 +5,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="libcss.css">
         <link rel="shortcut icon" href="Assets/favicon.ico">
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ace.js" type="text/javascript" charset="utf-8"></script>
         <script src="program.js"></script>
-
-        
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,13 +27,13 @@
             </div>
         </div>
 
-        <div class="middle" style="font-family: 'Texturina', serif; height:6500px;">
+        <div class="middle" style="font-family: 'Texturina', serif; height:2100px;">
             <div class="menu---content">
                 <div class="menu___child---content" >
                     <h2>Thư viện về Cấu trúc dữ liệu</h2>
                     <ul>
-                        <li><a href="index.html">Lời nói đầu</a></li>
-                        <li><a href="#mangdong">Mảng động</a></li>
+                        <li><a href="#loinoidau">Lời nói đầu</a></li>
+                        <li><a href="mangmotchieu.html">Mảng động</a></li>
                         <li><a href="#">Danh sách liên kết đôi</a></li>
                         <li><a href="#">Ngăn xếp</a></li>
                         <li><a href="#">Hàng đợi</a></li>
@@ -51,243 +47,99 @@
             </div>
 
             <div class="detail">
-                <h1 id="mangdong">Mảng động</h1>
+                <h1 id="loinoidau">Lời nói đầu</h1>
                 <h3 style="width:90px; border-left:2px solid black; padding-left:10px; background:rgb(159, 162, 153);">Mục lục</h3>
                 <ul id="tableOfContents" style="padding-left:20px;">
-                    <li><a href="#gioithieu">Giới thiệu về mảng một chiều</a></li>
-                    <li><a href="#cautruc">Cấu trúc mới của mảng</a></li>
-                    <li><a href="#vande">Vấn đề</a></li>
-                    <li><a href="#giaiphap">Giải pháp</a></li>
-                    <li><a href="#arraylist">Array List</a></li>
-                    <li><a href="#khoitao">Khởi tạo</a></li>
-                    <li><a href="#hamhuy">Hàm hủy</a></li>
+                    <li><a href="#gioithieu">Giới thiệu</a></li>
+                    <li><a href="#kienthuc">Kiến thức cần có</a></li>
+                    <li><a href="#chude">Chủ đề liên quan</a></li>
                 </ul>
 
-                <h3 id="gioithieu" style="margin-top:20px; border-top:2px solid black;">Giới thiệu về mảng một chiều</h3>
+                <h3 id="gioithieu" style="margin-top:20px; border-top:2px solid black;">Giới thiệu</h3>
+                <p>Thư viện về <b>Cấu trúc dữ liệu</b> được xây dựng với mục đích chia sẻ kiến thức Tin học đến với tất cả mọi người.<br>
+                Bài viết sẽ phân tích các cách tổ chức sao cho <b>Cấu trúc dữ liệu</b> hoạt động nhanh nhẹn, linh hoạt và mạnh mẽ.<br>
+                Hiểu biết nâng cao hơn về ngôn ngữ lập trình C++.<br>
+                Rèn luyện về tư duy thuật toán trong cách <b>Cấu trúc dữ liệu</b> hoạt động.
+                </p>
+                
+                <h3 id="kienthuc" style="margin-top:20px; border-top:2px solid black;">Kiến thức cần có</h3>
                 <p>
-                    Mảng một chiều gồm một tập hợp dãy các phần tử liên tiếp nhau trên không gian bộ nhớ.
-                    Là một cấu trúc dữ liệu đầu tiên được dạy khi mới bắt đầu học lập trình, nên có lẽ không còn xa lạ gì nữa.
-                    Phần tử đầu tiên của mảng có vị trí bắt đầu bằng 0.<br>
-                    
-                    <div class="pictures">
-                        <img class="pic" src="Assets/ex1.png">
-                        <p style="font-size:15px;">Mảng một chiều</p>
-                    </div>
-
-                    <b>Mảng tĩnh</b> là mảng một chiều có độ dài là hằng số.
-                    Khi ta cấp phát mảng tĩnh với độ dài bất kỳ, độ dài đó sẽ không thay đổi trong xuyên suốt vòng đời của nó và nó sẽ được tự động giải phóng bởi chương trình.<br>
-                    <b>Mảng động</b> là mảng một chiều được cấp phát với độ dài chưa biết.
-                    Trước đó khi ta đã cấp phát một mảng động và nó đã đầy, muốn thêm một phần tử thêm nữa thì ta sẽ cấp phát mảng động thứ hai và di dời các phần tử sang, sau đó giải phóng mảng cũ.
-                    Với phương pháp này ta sẽ có thể tạo một cấu trúc mảng tự co giãn, việc này sẽ làm thuận tiện hơn khi sử dụng mảng một chiều.<br>
-                    Trong thư viện này chúng ta sẽ chỉ xây dựng về mảng động vì tính tự co giãn độ dài mảng của nó.
+                    Thư viện được xây dựng tỉ mỉ có sử dụng kiến thức về lập trình <b>Hướng đối tượng</b> để dễ quản lí và tái sử dụng.<br>
+                    Ngoài ra cần có thêm các kiến thức về <b>Cấu trúc dữ liệu</b>, cách tính <i>độ phức tạp của thuật toán</i> để có thể nhận biết tốc độ của các phương thức.<br>
+                    Vì các <b>Cấu trúc dữ liệu</b> có thể lưu trữ các dạng dữ liệu bất kỳ, vì thế trong phần này có sử dụng lập trình tổng quát cho mọi kiểu dữ liệu, nên cần có kiến thức về template trong lập trình C++.
                 </p>
 
-                <h3 id="vande" style="margin-top:20px; border-top:2px solid black;">Vấn đề</h3>
-                <p>
-                    Mảng động ở đây sẽ được xây dựng chung cho mọi đối tượng, ví dụ như mảng số nguyên, số thực, sinh viên, số phức,... .
-                    Vì vậy chúng ta hãy xem mỗi phần tử là một kiểu dữ liệu chung chung, chưa biết rõ bên trong nó có những gì.<br>
-                    Thường các bạn sẽ khai báo một mảng n phần tử, chúng ta sẽ cùng phân tích việc sử dụng mảng đó như thế nào, liệu nó có hiệu quả hay không.<br>
-                    Trên mảng một chiều có các thao tác cơ bản để quản lý dữ liệu như : thêm, xóa, sửa, tìm kiếm, sắp xếp,... .
-                    Hãy tỉ mỉ xem xét các thao tác trên, đa số cần phải sử dụng phép gán cho kiểu dữ liệu chưa biết đó.
-                    Như việc thêm phần tử vào vị trí giữa, ta cần dời một dãy phần tử lùi về một ô, công việc này cần nhiều phép gán.
-                    Với việc sắp xếp các phần tử, đa số chúng ta cần hoán vị hai phần tử với nhau, như vậy công việc hoán vị cũng cần có phép gán.<br>
-                    - <b>Vấn đề thứ nhất</b>, giả sử kiểu dữ liệu đó là kiểu sinh viên, như vậy để gán bằng cho kiểu dữ liệu sinh viên, người dùng sẽ phải tự viết toán tử gán cho lớp sinh viên đó.<br>
-                    - <b>Vấn đề thứ hai</b>, một số thao tác cần thực hiện gán nhiều lần như thêm, xóa và sắp xếp.
-                    Chúng ta sẽ thử bàn về hiệu năng của hàm sắp xếp : bên trong nó đa số sẽ sử dụng hoán vị, hoặc phép chèn như thuật toán Insertion Sort cũng đều thông qua phép gán.
-                    Như vậy đối với mỗi kiểu dữ liệu khác nhau, tùy vào độ lớn của nó mà tốc độ sẽ nhanh hơn hay chậm hơn.
-                    Ví dụ sắp xếp một mảng số nguyên ( mỗi số nguyên là 4 bytes ) đem so với sắp xếp một mảng sinh viên ( mỗi sinh viên thường sẽ hơn 100 bytes ) chênh lệnh độ lớn của kiểu dữ liệu là hơn gấp chục lần, nên tốc độ cũng sẽ chậm hơn gấp chục lần.
-                    Vì vậy vấn đề thứ hai là tốc độ của các thao tác lại tùy thuộc vào kiểu dữ liệu.<br>
-                    - <b>Vấn đề thứ ba</b>, đối với một kiểu dữ liệu lớn như kiểu sinh viên, giả sử khi ta đang lưu trữ một triệu sinh viên ( mỗi sinh viên cho là 1000 bytes ), vì mảng liên tiếp nên ta đang dùng một đoạn rất dài trong không gian ô nhớ là 1000 x 1 triệu bytes.
-                    Thường như vậy ta sẽ không thể khai thác hết được bộ nhớ của máy tính, vì dãy ô nhớ đó có thể lớn hơn.<br>
-                    - Như vậy, chúng ta đã tìm ra ba vấn đề : bắt người dùng tự viết toán tử gán, tốc độ tỉ lệ nghịch với độ lớn kiểu dữ liệu, không gian bộ nhớ quá dài.
-                </p>
+                <h3 id="chude" style="margin-top:20px; border-top:2px solid black;">Chủ đề liên quan</h3>
+                <ul style="padding-left:20px;">
+                    <li><b>Mảng động</b></li>
+                    <p>
+                        - Nói về các Cấu trúc dữ liệu tất nhiên không thể thiếu về phần <i>mảng một chiều</i>.
+                        Mảng một chiều đa số có lẽ là một Cấu trúc dữ liệu đầu tiên mà mọi người được học khi mới bắt đầu học lập trình.
+                        Đây là một Cấu trúc dữ liệu cơ bản nhất, dễ quản lí và truy cập các phần tử với tốc độ là hằng số.
+                        Hiện nay cũng đã có rất nhiều thuật toán mạnh mẽ và nhanh nhẹn để giải quyết một số vấn đề cơ bản trên mảng một chiều như tìm kiếm, sắp xếp, ... .
+                        Vì vậy mảng một chiều là lựa chọn tốt để sử dụng để quản lí dữ liệu.
+                    </p>
 
-                <h3 id="giaiphap" style="margin-top:20px; border-top:2px solid black;">Giải pháp</h3>
-                <p>
-                    Để giải quyết tốt các vấn đề trên, chúng ta sẽ không dùng mảng thường gồm n phần tử, thay vào đó, chúng ta sẽ cần một mảng các con trỏ, mỗi con trỏ liên kết với một phần tử.
-                    Những vị trí trống chưa có phần tử nào, con trỏ đó sẽ được gán giá trị <b>null</b> cho nó.
+                    <li><b>Danh sách liên kết</b></li>
+                    <p>
+                        - Danh sách liên kết là Cấu trúc dữ liệu đầu tiên khi chúng ta được học môn <b>Cấu trúc dữ liệu và Giải thuật</b>.
+                        Đây là cấu trúc dữ liệu cơ bản, là nền tảng để học lên các cấu trúc dữ liệu phức tạp như <i>Cây nhị phân tìm kiếm</i>, <i>Cây Trie</i>, ... .
+                        Việc chèn phần tử vào danh sách liên kết với tốc độ là hằng số giúp cấu trúc dữ liệu này là lựa chọn tốt để sự dụng để quản lí dữ liệu.
+                        Tuy nhiên thư viện này sẽ chỉ đề cập đến <i>Danh sách liên kết đôi</i>, bỏ qua phần <i>Danh sách liên kết đơn</i> vì nó có những sự hạn chế nhất định.
+                    </p>
 
-                    <div class="pictures">
-                        <img class="pic" src="Assets/ex2.png">
-                        <p>Mảng một chiều mới</p>
-                    </div>
+                    <li><b>Ngăn xếp</b></li>
+                    <p>
+                        - Ngăn xếp ( <b>Stack</b> ) là một danh sách liên kết bị hạn chế.
+                        Ngăn xếp làm việc theo nguyên lí <i>vào sau ra trước</i> <b>LIFO</b> ( Last In First Out ).
+                        Thường được sử dụng để thực hiện khử đệ quy, chuyển biểu thức sang trung tố, hậu tố, duyệt đồ thị theo chiều sâu, ... .
+                    </p>
 
-                    Giả sử với việc hoán vị hai phần tử, ta chỉ cần hoán vị hai con trỏ, như vậy hai phần tử sẽ đổi chỗ cho nhau, và tốc độ gán hai con trỏ cũng như gán hai biến kiểu int với nhau.
-                    Như vậy các thao tác trên mảng có tốc độ không đổi, bất chấp kiểu dữ liệu có lớn hơn đi nữa.
+                    <li><b>Hàng đợi</b></li>
+                    <p>
+                        - Hàng đợi ( <b>Queue</b> ) là một danh sách liên kết bị hạn chế.
+                        Hàng đợi làm việc theo nguyên lí <i>vào trước ra trước</i> <b>FIFO</b> ( First In First Out ).
+                        Thường được sử dụng để thực hiện duyệt đồ thị theo chiều rộng, nguyên tắc xếp hàng như hàng vào trước sẽ được xử lí trước, ... .
+                    </p>
 
-                    <div class="pictures">
-                        <img class="pic" src="Assets/ex3.png">
-                        <p>Hoán vị hai vị trí 0 và 2</p>
-                    </div>
+                    <li><b>Heap</b></li>
+                    <p>
+                        - Heap là một cấu trúc dữ liệu cho phép lấy ra các phần tử lớn nhất, nhỏ nhất bên trong nó với tốc độ xấp xỉ hằng số.
+                        Heap có thể được xây dựng bằng mảng một chiều, cây nhị phân, cây tam phân, ... .
+                        Ở thư viện này sẽ đề cập đến cả hai cách xây dựng Heap sử dụng mảng một chiều và cây nhị phân.
+                        Thuật toán sắp xếp Heap Sort được dựa trên nguyên lí làm việc của Heap.
+                        Heap được ứng dụng trong thuật toán Dijkstra trên đồ thị, ... .
+                    </p>
 
-                    Như vậy vấn đề về phép gán đã được giải quyết, chúng ta sẽ không gán hai kiểu dữ liệu cho nhau mà sẽ gán hai con trỏ, vì vậy người dùng sẽ không cần viết toán tử gán.
-                    Với một dãy con trỏ ( thường con trỏ là 4 bytes ), giả sử mảng gồm một triệu phần tử, độ dài của dãy con trỏ chỉ gồm 4 x 1 triệu bytes, còn các phần tử sẽ nằm rời rạc trong bộ nhớ.
-                    Ở các vị trí không có phần tử, con trỏ đó sẽ mang giá trị <b>null</b>, như thế sẽ tránh sử dụng dư thừa tài nguyên.
-                </p>
+                    <li><b>Cây Trie</b></li>
+                    <p>
+                        - Cây Trie là một cấu trúc dữ liệu lưu trữ với mỗi phần tử gồm một cặp khóa và giá trị ( key - value ).
+                        Khóa này là một chuỗi ký tự, mỗi ký tự được lưu trên một nút của cây Trie, nút chứa ký tự cuối cùng sẽ chứa giá trị của một phần tử.
+                        Tốc độ truy cập của cây Trie nhanh hơn nhiều so với sử dụng <i>cây nhị phân</i> hay <i>cây nhiều nhánh</i>, tốc độ đó xấp xỉ tuyến tính độ dài của một chuỗi.
+                        Đổi lại cây Trie tốn nhiều không gian bộ nhớ hơn.
+                    </p>
 
-                <h3 id="arraylist" style="margin-top:20px; border-top:2px solid black;">Array List</h3>
-                <p>
-                    Như vậy chúng ta đã có giải pháp để xây dựng cấu trúc một mảng động hiệu quả.
-                    Chúng ta sẽ bắt tay vào xây dựng cấu trúc mảng động và đặt tên nó là Array List.<br>
-                    Ở phần này chúng ta cần có các kiến thức về :<br>
-                    - Array List được xây dựng cho mọi kiểu dữ liệu, ta sẽ sử dụng template trong C++.<br>
-                    - Sử dụng lập trình hướng đối tượng trong C++ thay vì hướng thủ tục trong C.<br>
-                    - Các kiến thức về lập trình hướng đối tượng : khởi tạo, hủy, phương thức, move segmantic, toán tử, functor,... .
-                    Nếu bạn chưa được học về lập trình hướng đối tượng thì cũng không sao, chúng ta sẽ học từ từ.<br>
-                    Quy ước : với capacity là giới hạn mảng chứa được, khi mảng đã đạt giới hạn ( full capacity ), ta sẽ nâng gấp đôi không gian cho nó, như vậy khi số phần tử bằng một nửa capacity, ta sẽ giảm gấp đôi không gian.<br>
-                    <b>Lưu ý</b> : người dùng sẽ phải tự viết hàm khởi tạo sao chép cho kiểu dữ liệu họ tạo ra nếu muốn sử dụng thư viện này.
-                    Chúng ta sẽ bắt đầu tạo một lớp arraylist và các thuộc tính của nó.
+                    <li><b>Cây tìm kiếm</b></li>
+                    <p>
+                        - Cây nhị phân tìm kiếm có lẽ là cấu trúc dữ liệu dạng cây đầu tiên khi được học môn <b>Cấu trúc dữ liệu và giải thuật</b>.
+                        Mỗi nút của cây nhị phân có nhiều nhất hai nút con, hoặc không có nút con nào, đây là dạng cây hai nhánh.
+                        Một số biến thể của cây nhị phân tìm kiếm là <i>cây AVL, cây đỏ đen, cây Splay, ... .</i><br>
+                        Cây nhiều nhánh là dạng cây tổng quát, ở mỗi nút có thể có nhiều nhánh, nó còn được gọi là B cây ( <b>B Tree</b> ).
+                        B Tree có nhiều biến thể như Cây 2-3-4, B Tree, B* Tree, B+ Tree, ... .<br>
+                        Trong thư viện này chỉ đề cập đến B+ Tree, một là vì tốc độ truy cập trên nó, hai là vì B+ Tree cho phép duyệt tuyến tính một cách dễ dàng trên các nút lá.
+                        B Tree được sử dụng trên nhiều Cơ sở dữ liệu, ứng dụng trong các thuật toán vét cạn trò chơi, các môn đối kháng trí tuệ, ... .
+                    </p>
 
-                    <div class="scripts"><p id="editor1">template &lt;class data&gt;
-class arraylist{
-private:
-    data** ptr;
-    size_t capacity;
-    size_t size;
-};</p></div>
-
-                    Trong đó các thuộc tính :<br>
-                    - ptr : con trỏ cấp hai quản lý mảng con trỏ cấp một.<br>
-                    - size : số lượng phần tử trong mảng.<br>
-                    - capacity : giới hạn lưu trữ của mảng.<br>
-                </p>
-                <h3 id="khoitao" style="margin-top:20px; border-top:2px solid black;">Khởi tạo</h3>
-                <p>
-                    - Đối với hàm khởi tạo mặc định : gán capacity mặc định là giá trị 20, mảng hiện đang rỗng nên các con trỏ đều mang giá trị <b>nullptr</b>.<br>
-                    Độ phức tạp thời gian là O(1).
-                    <div class="scripts"><p id="editor2">arraylist() : size { 0 }, capacity{ 20 }
-{
-    this->ptr = new data * [this->capacity];
-    for(size_t i = 0; i < this->capacity; ++i)
-        this->ptr[i] = nullptr;
-}
-
-/*Cách gọi*/
-void main()
-{
-    arraylist&lt;int&gt; arr;   //Tạo mảng rỗng
-}</p></div>
-
-                    - Đối với hàm khởi tạo sao chép từ một mảng tĩnh có kiểu dữ liệu <b>data[n]</b> với độ dài n chưa biết, ta sử dụng thêm template để nó tự nhận biến độ dài của mảng này.
-                    Với cách khởi tạo này ta cho capacity của mảng bằng với n.<br>
-                    Độ phức tạp thời gian là O(n).
-
-                    <div class="scripts"><p id="editor3">template &lt;int n&gt;
-arraylist(data (&arr)[n]) : size{ n }, capacity{ n }
-{
-    this->ptr = new data * [n];
-    for(size_t i = 0; i &lt; this->capacity; ++i)
-        this->ptr[i] = new data(arr[i]);
-}
-
-/*Cách gọi*/
-void main()
-{
-    int a[5]{1, 3, 7, 2, 4};
-    arraylist&lt;int&gt; arr(a);   //Tạo mảng từ mảng khác
-}</p></div>
-
-                    - Khởi tạo sao chép từ initializer_list của C++, khai báo thêm thư viện &lt;initializer_list&gt;.
-                    Sử dụng hai phương thức size() để lấy số phần tử và begin() để trỏ vào phần tử đầu tiên, gán capacity bằng với số phần tử trong đó.<br>
-                    Độ phức tạp thời gian là O(n).
-
-                    <div class="scripts"><p id="editor4">#include&lt;initializer_list&gt;
-arraylist(std::initializer_list&lt;data&gt; list) :
-    size{ list.size() }, capacity{ list.size() }
-{
-    this->ptr = new data * [this->capacity];
-
-    const data* pointer = list.begin();
-    for(size_t i = 0; i &lt; this->capacity; ++i)
-        this->ptr[i] = new data(pointer[i]);
-}
-
-/*Cách gọi*/
-void main()
-{
-    arraylist&lt;int&gt; arr({1, 3, 7, 2, 4});   //Tạo mảng từ initializer_list
-}</p></div>
-
-                    - Hàm khởi tạo sao chép, sao chép tài nguyên từ đối tượng nguồn.
-                    Để ý rằng nửa đoạn [size, capacity) sẽ không có phần tử, nên ta sẽ gán bằng giá trị <b>nullptr</b>.<br>
-                    Độ phức tạp thời gian là O(n).
-                    <div class="scripts"><p id="editor5">arraylist(const arraylist& source) :
-    size{ source.size }, capacity{ source.capacity }
-{
-    this->ptr = new data * [this->capacity];
-
-    for(size_t i = 0; i &lt; this->size; ++i)
-        this->ptr[i] = new data(*source.ptr[i]);
-    for(size_t i = this->size; i < this->capacity; ++i)
-        this->ptr[i] = nullptr;
-}
-
-/*Cách gọi*/
-void main()
-{
-    arraylist&lt;int&gt; source({1, 3, 7, 2, 4});
-    arraylist&lt;int&gt; arr(source);   //Khởi tạo sao chép từ source
-}</p></div>
-
-                    - Hàm khởi tạo chuyển đổi tài nguyên ( move segmantic ) : được gọi khi đối tượng lấy làm tham số có vòng đời ngắn, sẽ bị giải phóng sau khi ra khỏi hàm, ta sẽ thực hiện chuyển đổi dữ liệu thay vì sao chép lại tất cả.
-                    Điều đó làm giảm đáng kể những thao tác dư thừa, giúp tốc độ của chương trình nhanh hơn. Có thể hiểu ta sẽ thực hiện hoán vị hai mảng.<br>
-                    Thường có độ phức tạp thời gian là O(1).
-
-                    <div class="scripts"><p id="editor6">arraylist(arraylist&& source) noexcept :
-    size{ source.size }, capacity{ source.capacity }
-{
-    this->ptr = source.ptr;
-    source.ptr = nullptr;
-}
-
-/*Cách gọi*/
-void main()
-{
-    //Tạo mảng từ đối tượng có vòng đời ngắn ( giá trị rvalue )
-    arraylist&lt;int&gt; arr(arraylist&lt;int&gt;({2, 5, 5, 1, 6}));
-}</p></div>
-
-                    Trong đó, source là đối tượng nguồn, do vòng đời ngắn nên sẽ được giải phóng ngay sau khi ra khỏi hàm, thay vì tạo mới cả mảng, ta sẽ lấy luôn dữ liệu mà source đang giữ.
-                </p>
-
-                <h3 id="hamhuy" style="margin-top:20px; border-top:2px solid black;">Hàm hủy</h3>
-                <p>
-                    - Hàm hủy được dùng để giải phóng tài nguyên, tự động được gọi khi đối tượng bị giải phóng.
-
-                    <div class="scripts"><p id="editor7">~arraylist()
-{
-    if(this->ptr == nullptr)
-        return;
-    
-    for(size_t i = 0; i < this->size; ++i)
-        delete this->ptr[i];
-    delete[] this->ptr;
-}
-
-/*Cách gọi*/
-void main()
-{
-    //Tạo mảng từ đối tượng có vòng đời ngắn ( giá trị rvalue )
-    arraylist&lt;int&gt; arr(arraylist&lt;int&gt;({2, 5, 5, 1, 6}));
-}</p></div>
-                    Đầu tiên ta giải phóng các phần tử trong nửa đoạn [0, size), sau đó mới giải phóng mảng con trỏ.
-                    Hãy để ý hàm khởi tạo chuyển đổi tài nguyên, ta gán source.ptr bằng giá trị <b>nullptr</b>, vì thế phải kiểm tra ptr có null không rồi mới đi giải phóng.
-                </p>
-
+                    <li><b>Bảng băm</b></li>
+                    <p>
+                        - Bảng băm ( <b>Hash Table</b> ) là một cấu trúc dữ liệu mạnh mẽ, thường lưu trữ mỗi phần tử là một cặp khóa và giá trị ( key - value ).
+                        Cách lưu trữ của nó giống với mảng một chiều, tuy nhiên cách truy cập dữ liệu của nó rất đặc biệt.
+                        Từ một khóa cho trước, thông qua một hoặc nhiều hàm băm ( Hash Function ), ta sẽ biết được giá trị tương ứng được lưu trữ ở vị trí nào trên bảng băm.
+                        Do đó, tốc độ của bảng băm còn phụ thuộc vào việc chọn hàm băm sao cho phù hợp với kiểu dữ liệu của khóa.
+                        Bảng băm luôn là lựa chọn hàng đầu trong việc lưu mật khẩu người dùng, thường khóa của bảng băm sẽ là một chuỗi ký tự.
+                    </p>
                 </ul>
             </div>
         </div>
-
-
-        
-        <script>
-            setEditor('editor1', '400px', '160px');
-            setEditor('editor2', '520px', '280px');
-            setEditor('editor3', '600px', '310px');
-            setEditor('editor4', '800px', '350px');
-            setEditor('editor5', '720px', '375px');
-            setEditor('editor6', '720px', '290px');
-            setEditor('editor7', '720px', '350px');
-        </script>
     </body>
 </html>
