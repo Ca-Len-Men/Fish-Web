@@ -37,7 +37,7 @@
                     <h2>Thư viện về Cấu trúc dữ liệu</h2>
                     <ul>
                         <li><a href="index.html">Lời nói đầu</a></li>
-                        <li><a href="#mangdong">Mảng động</a></li>
+                        <li><a href="#mangdong">Array List</a></li>
                         <li><a href="#">Danh sách liên kết đôi</a></li>
                         <li><a href="#">Ngăn xếp</a></li>
                         <li><a href="#">Hàng đợi</a></li>
@@ -51,23 +51,20 @@
             </div>
 
             <div class="detail">
-                <h1 id="mangdong">Mảng động</h1>
+                <h1 id="mangdong">Array List</h1>
                 <h3 style="width:90px; border-left:2px solid black; padding-left:10px; background:rgb(159, 162, 153);">Mục lục</h3>
                 <ul id="tableOfContents" style="padding-left:20px;">
                     <li><a href="#gioithieu">Giới thiệu về mảng một chiều</a></li>
-                    <li><a href="#cautruc">Cấu trúc mới của mảng</a></li>
-                    <li><a href="#vande">Vấn đề</a></li>
-                    <li><a href="#giaiphap">Giải pháp</a></li>
-                    <li><a href="#arraylist">Array List</a></li>
-                    <li><a href="#khoitao">Khởi tạo</a></li>
-                    <li><a href="#hamhuy">Hàm hủy</a></li>
+                    <li><a href="#basic">Hướng dẫn sử dụng cơ bản Array List</a></li>
+                    <li><a href="#baitap">Bài tập vận dụng</a></li>
                 </ul>
 
                 <h3 id="gioithieu" style="margin-top:20px; border-top:2px solid black;">Giới thiệu về mảng một chiều</h3>
                 <p>
+                    Mảng một chiều một cấu trúc dữ liệu đầu tiên được dạy khi mới bắt đầu học lập trình, nên có lẽ không còn xa lạ gì nữa.
                     Mảng một chiều gồm một tập hợp dãy các phần tử liên tiếp nhau trên không gian bộ nhớ.
-                    Là một cấu trúc dữ liệu đầu tiên được dạy khi mới bắt đầu học lập trình, nên có lẽ không còn xa lạ gì nữa.
-                    Phần tử đầu tiên của mảng có vị trí bắt đầu bằng 0.<br>
+                    Phần tử đầu tiên của mảng có vị trí bắt đầu ở vị trí 0.
+                    Mảng một chiều cho phép truy cập vào một phần tử trong mảng tại vị trí bất kỳ với tốc độ là hằng số.<br>
                     
                     <div class="pictures">
                         <img class="pic" src="Assets/ex1.png">
@@ -76,218 +73,150 @@
 
                     <b>Mảng tĩnh</b> là mảng một chiều có độ dài là hằng số.
                     Khi ta cấp phát mảng tĩnh với độ dài bất kỳ, độ dài đó sẽ không thay đổi trong xuyên suốt vòng đời của nó và nó sẽ được tự động giải phóng bởi chương trình.<br>
-                    <b>Mảng động</b> là mảng một chiều được cấp phát với độ dài chưa biết.
-                    Trước đó khi ta đã cấp phát một mảng động và nó đã đầy, muốn thêm một phần tử thêm nữa thì ta sẽ cấp phát mảng động thứ hai và di dời các phần tử sang, sau đó giải phóng mảng cũ.
-                    Với phương pháp này ta sẽ có thể tạo một cấu trúc mảng tự co giãn, việc này sẽ làm thuận tiện hơn khi sử dụng mảng một chiều.<br>
-                    Trong thư viện này chúng ta sẽ chỉ xây dựng về mảng động vì tính tự co giãn độ dài mảng của nó.
+                    <b>Mảng động</b> là mảng một chiều được cấp phát với dung lượng thuộc vùng nhớ Heap.
+                    Mảng động cho phép ta có thể thu hồi dữ liệu, nới rộng và thu nhỏ độ dài tùy ý, luôn được ưu tiên sử dụng hơn vì nó có thể co giãn để chứa dữ liệu.<br>
+                    - Thư viện Array List được xây dựng, sử dụng tương tự như mảng một chiều nhưng có nhiều chức năng hơn, dễ sử dụng hơn và đặc biệt là tự quản lý bộ nhớ, tự thu hồi khi không cần sử dụng.
+                    Khuyên thường dùng với những tập dữ liệu nhỏ hoặc vừa đủ lớn. Array List cũng hỗ trợ đa dạng tính năng, phù hợp với các kiểu dữ liệu built-in, hỗ trợ <b>Iterator</b> và tương tác với một số lớp trong C++.<br>
+                    Link project : <a href="https://github.com/Ca-Len-Men/DataStructure/blob/Object/arraylist.h" target="_blank">Array List</a>
                 </p>
+                
+                
 
-                <h3 id="vande" style="margin-top:20px; border-top:2px solid black;">Vấn đề</h3>
+                <h3 id="basic" style="margin-top:20px; border-top:2px solid black;">Hướng dẫn sử dụng cơ bản Array List</h3>
                 <p>
-                    Mảng động ở đây sẽ được xây dựng chung cho mọi đối tượng, ví dụ như mảng số nguyên, số thực, sinh viên, số phức,... .
-                    Vì vậy chúng ta hãy xem mỗi phần tử là một kiểu dữ liệu chung chung, chưa biết rõ bên trong nó có những gì.<br>
-                    Thường các bạn sẽ khai báo một mảng n phần tử, chúng ta sẽ cùng phân tích việc sử dụng mảng đó như thế nào, liệu nó có hiệu quả hay không.<br>
-                    Trên mảng một chiều có các thao tác cơ bản để quản lý dữ liệu như : thêm, xóa, sửa, tìm kiếm, sắp xếp,... .
-                    Hãy tỉ mỉ xem xét các thao tác trên, đa số cần phải sử dụng phép gán cho kiểu dữ liệu chưa biết đó.
-                    Như việc thêm phần tử vào vị trí giữa, ta cần dời một dãy phần tử lùi về một ô, công việc này cần nhiều phép gán.
-                    Với việc sắp xếp các phần tử, đa số chúng ta cần hoán vị hai phần tử với nhau, như vậy công việc hoán vị cũng cần có phép gán.<br>
-                    - <b>Vấn đề thứ nhất</b>, giả sử kiểu dữ liệu đó là kiểu sinh viên, như vậy để gán bằng cho kiểu dữ liệu sinh viên, người dùng sẽ phải tự viết toán tử gán cho lớp sinh viên đó.<br>
-                    - <b>Vấn đề thứ hai</b>, một số thao tác cần thực hiện gán nhiều lần như thêm, xóa và sắp xếp.
-                    Chúng ta sẽ thử bàn về hiệu năng của hàm sắp xếp : bên trong nó đa số sẽ sử dụng hoán vị, hoặc phép chèn như thuật toán Insertion Sort cũng đều thông qua phép gán.
-                    Như vậy đối với mỗi kiểu dữ liệu khác nhau, tùy vào độ lớn của nó mà tốc độ sẽ nhanh hơn hay chậm hơn.
-                    Ví dụ sắp xếp một mảng số nguyên ( mỗi số nguyên là 4 bytes ) đem so với sắp xếp một mảng sinh viên ( mỗi sinh viên thường sẽ hơn 100 bytes ) chênh lệnh độ lớn của kiểu dữ liệu là hơn gấp chục lần, nên tốc độ cũng sẽ chậm hơn gấp chục lần.
-                    Vì vậy vấn đề thứ hai là tốc độ của các thao tác lại tùy thuộc vào kiểu dữ liệu.<br>
-                    - <b>Vấn đề thứ ba</b>, đối với một kiểu dữ liệu lớn như kiểu sinh viên, giả sử khi ta đang lưu trữ một triệu sinh viên ( mỗi sinh viên cho là 1000 bytes ), vì mảng liên tiếp nên ta đang dùng một đoạn rất dài trong không gian ô nhớ là 1000 x 1 triệu bytes.
-                    Thường như vậy ta sẽ không thể khai thác hết được bộ nhớ của máy tính, vì dãy ô nhớ đó có thể lớn hơn.<br>
-                    - Như vậy, chúng ta đã tìm ra ba vấn đề : bắt người dùng tự viết toán tử gán, tốc độ tỉ lệ nghịch với độ lớn kiểu dữ liệu, không gian bộ nhớ quá dài.
-                </p>
+                    Bài viết này sẽ giới thiệu chính về lớp Array List, bên trong nó được cài đặt bằng mảng một chiều, vì thế có thể sử dụng nó như mảng một chiều bình thường.<br>
+                    Cú pháp khai báo Array List : <b>arraylist&lt;typename&gt;</b>. Trong đó <b>typename</b> là loại dữ liệu cần lưu trữ.<br>
+                    Bạn có thể khởi tạo Array List rỗng, từ danh sách cho trước, hoặc sao chép dữ liệu từ một Array List khác.
 
-                <h3 id="giaiphap" style="margin-top:20px; border-top:2px solid black;">Giải pháp</h3>
-                <p>
-                    Để giải quyết tốt các vấn đề trên, chúng ta sẽ không dùng mảng thường gồm n phần tử, thay vào đó, chúng ta sẽ cần một mảng các con trỏ, mỗi con trỏ liên kết với một phần tử.
-                    Những vị trí trống chưa có phần tử nào, con trỏ đó sẽ được gán giá trị <b>null</b> cho nó.
+                    <div class="scripts"><p id="editor1">void main()
+{
+    //Khởi tạo Array List rỗng
+    arraylist&lt;int&gt; list;
+    std::cout &lt;&lt; list;
 
-                    <div class="pictures">
-                        <img class="pic" src="Assets/ex2.png">
-                        <p>Mảng một chiều mới</p>
+    //Khởi tạo Array List có sẵn các phần tử
+    arraylist&lt;int&gt; list2{1, 2, 3};
+    std::cout &lt;&lt; list2;
+
+    arraylist&lt;char&gt; list3{'a', 'b', 'c'};
+    std::cout &lt;&lt; list3;
+
+    //Khởi tạo sao chép từ list2
+    arraylist&lt;int&gt; list4(list2);
+    std::cout &lt;&lt; list4;
+
+    arraylist&lt;int&gt; list5 = arraylist&lt;int&gt;{1, 3, 5};
+    std::cout &lt;&lt; list5;
+}</p>
                     </div>
 
-                    Giả sử với việc hoán vị hai phần tử, ta chỉ cần hoán vị hai con trỏ, như vậy hai phần tử sẽ đổi chỗ cho nhau, và tốc độ gán hai con trỏ cũng như gán hai biến kiểu int với nhau.
-                    Như vậy các thao tác trên mảng có tốc độ không đổi, bất chấp kiểu dữ liệu có lớn hơn đi nữa.
+                    Các phương thức thêm, xóa, sửa dữ liệu cơ bản : pushFront, pushBack, pushAt, popFront, popBack, popAt.<br>
+                    Các phương thức trên dùng để thêm, xóa, sửa một phần tử trong Array List.
 
-                    <div class="pictures">
-                        <img class="pic" src="Assets/ex3.png">
-                        <p>Hoán vị hai vị trí 0 và 2</p>
+                    <div class="scripts"><p id="editor2">void main()
+{
+    arraylist&lt;int&gt; list{5, 2, 1, 3, 7};
+    //Xóa một phần tử
+    list.popBack();
+    list.popFront();
+    list.popAt(1);
+
+    //Thêm một phần tử
+    list.pushBack(10);
+    list.pushFront(12);
+    list.pushAt(31, 2);
+
+
+    //Gán lại một phần tử
+    list[2] = 15;
+    std::cout &lt;&lt; list;
+}</p>
                     </div>
 
-                    Như vậy vấn đề về phép gán đã được giải quyết, chúng ta sẽ không gán hai kiểu dữ liệu cho nhau mà sẽ gán hai con trỏ, vì vậy người dùng sẽ không cần viết toán tử gán.
-                    Với một dãy con trỏ ( thường con trỏ là 4 bytes ), giả sử mảng gồm một triệu phần tử, độ dài của dãy con trỏ chỉ gồm 4 x 1 triệu bytes, còn các phần tử sẽ nằm rời rạc trong bộ nhớ.
-                    Ở các vị trí không có phần tử, con trỏ đó sẽ mang giá trị <b>null</b>, như thế sẽ tránh sử dụng dư thừa tài nguyên.
-                </p>
+                    Các phương thức phục vụ công việc tìm kiếm, sắp xếp, đảo mảng cơ bản : indexOf, sort, reverse
 
-                <h3 id="arraylist" style="margin-top:20px; border-top:2px solid black;">Array List</h3>
+                    <div class="scripts"><p id="editor3">void main()
+{
+    arraylist&lt;int&gt; list{2, 5, -6, 0, 3, 7, 1};
+    //Tìm kiếm
+    std::cout &lt;&lt; "So -6 o vi tri "
+        &lt;&lt; list.indexOf(-6) &lt;&lt; std::endl;
+    //Sắp xếp tăng dần
+    list.sort();
+    std::cout &lt;&lt; list;
+    //Đảo mảng
+    list.reverse();
+    std::cout &lt;&lt; list;
+}</p>
+                    </div>
+
+                    Ngoài ra Array List còn hỗ trợ lớp Iterator dành cho việc duyệt và thao tác với nó.<br>
+                    Iterator này gồm có các phương thức tăng, giảm ( ++, -- ) như con trỏ, có thể dùng nó thực hiện một số giải thuật như tìm kiếm nhị phân, Quick Sort,... .
+                    Sử dụng Iterator bằng cách gọi các phương thức của Array List như : begin, end, rbegin, rend, cbegin, cend, crbegin, crend.
+
+                    <div class="scripts"><p id="editor4">void main()
+{
+    arraylist&lt;int&gt; list{2, 5, -6, 0, 3, 7, 1};
+    auto iter = list.begin() + 3;
+    std::cout &lt;&lt; "Phan tu thu 3 : " &lt;&lt; *i;
+
+    //Xuất mảng dùng vòng lặp
+    for(int i : list)
+        std::cout &lt;&lt; i &lt;&lt; ' ';
+    std::cout &lt;&lt; std::endl;
+
+    //Tạo list2 gồm các phần tử trong nửa đoạn [1, 4) của list
+    arraylist&lt;int&gt; list2(list.begin() + 1, list.begin() + 4);
+    std::cout &gt;&gt; list2;
+}</p>
+                    </div>
+
+                    Như vậy các bạn đã có thể sử dụng tốt lớp Array List mà không nhọc nhằn gì nhiều.
+                    Để hiểu rõ hơn nữa thì hãy qua phần bài tập để nắm rõ hơn nhé.
+                    Hi vọng rằng nó hữu ích với các bạn.
+                </p>
+                
+                <h3 id="baitap" style="margin-top:20px; border-top:2px solid black;">Bài tập vận dụng</h3>
                 <p>
-                    Như vậy chúng ta đã có giải pháp để xây dựng cấu trúc một mảng động hiệu quả.
-                    Chúng ta sẽ bắt tay vào xây dựng cấu trúc mảng động và đặt tên nó là Array List.<br>
-                    Ở phần này chúng ta cần có các kiến thức về :<br>
-                    - Array List được xây dựng cho mọi kiểu dữ liệu, ta sẽ sử dụng template trong C++.<br>
-                    - Sử dụng lập trình hướng đối tượng trong C++ thay vì hướng thủ tục trong C.<br>
-                    - Các kiến thức về lập trình hướng đối tượng : khởi tạo, hủy, phương thức, move segmantic, toán tử, functor,... .
-                    Nếu bạn chưa được học về lập trình hướng đối tượng thì cũng không sao, chúng ta sẽ học từ từ.<br>
-                    Quy ước : với capacity là giới hạn mảng chứa được, khi mảng đã đạt giới hạn ( full capacity ), ta sẽ nâng gấp đôi không gian cho nó, như vậy khi số phần tử bằng một nửa capacity, ta sẽ giảm gấp đôi không gian.<br>
-                    <b>Lưu ý</b> : người dùng sẽ phải tự viết hàm khởi tạo sao chép cho kiểu dữ liệu họ tạo ra nếu muốn sử dụng thư viện này.
-                    Chúng ta sẽ bắt đầu tạo một lớp arraylist và các thuộc tính của nó.
+                    <b>Bài 1.</b> Cho hai dãy số nguyên tăng dần, hãy gộp hai dãy đó thành một dãy mới cũng tăng dần.<br>
 
-                    <div class="scripts"><p id="editor1">template &lt;class data&gt;
-class arraylist{
-private:
-    data** ptr;
-    size_t capacity;
-    size_t size;
-};</p></div>
+                    <div class="scripts"><p id="editor5">void main()
+{
+    arraylist&lt;int&gt; list1{-10, -2, 0, 6, 11},
+        list2{3, 7, 8, 14, 22};
 
-                    Trong đó các thuộc tính :<br>
-                    - ptr : con trỏ cấp hai quản lý mảng con trỏ cấp một.<br>
-                    - size : số lượng phần tử trong mảng.<br>
-                    - capacity : giới hạn lưu trữ của mảng.<br>
+    //Cách 1 : gộp hai mảng và gọi hàm sắp xếp
+    arraylist&lt;int&gt; list3 = list1 + list2;
+    list3.sort();
+    std::cout &lt;&lt; list3;
+
+    //Cách 2: so sánh từng phần tử và thêm vào
+    arraylist&lt;int&gt; list4;
+    auto i = list1.begin(), j = list2.begin();
+
+    while (i != list1.end() && j != list2.end())
+        if (*i <= *j) {
+            list4.pushBack(*i); ++i;
+        }
+        else {
+            list4.pushBack(*j); ++j;
+        }
+    list4 += arraylist&lt;int&gt;(i, list1.end()) +
+        arraylist&lt;int&gt;(j, list2.end());
+    std::cout &lt;&lt; list4;
+}</p>
+                    </div>
+
                 </p>
-                <h3 id="khoitao" style="margin-top:20px; border-top:2px solid black;">Khởi tạo</h3>
-                <p>
-                    - Đối với hàm khởi tạo mặc định : gán capacity mặc định là giá trị 20, mảng hiện đang rỗng nên các con trỏ đều mang giá trị <b>nullptr</b>.<br>
-                    Độ phức tạp thời gian là O(1).
-                    <div class="scripts"><p id="editor2">arraylist() : size { 0 }, capacity{ 20 }
-{
-    this->ptr = new data * [this->capacity];
-    for(size_t i = 0; i < this->capacity; ++i)
-        this->ptr[i] = nullptr;
-}
-
-/*Cách gọi*/
-void main()
-{
-    arraylist&lt;int&gt; arr;   //Tạo mảng rỗng
-}</p></div>
-
-                    - Đối với hàm khởi tạo sao chép từ một mảng tĩnh có kiểu dữ liệu <b>data[n]</b> với độ dài n chưa biết, ta sử dụng thêm template để nó tự nhận biến độ dài của mảng này.
-                    Với cách khởi tạo này ta cho capacity của mảng bằng với n.<br>
-                    Độ phức tạp thời gian là O(n).
-
-                    <div class="scripts"><p id="editor3">template &lt;int n&gt;
-arraylist(data (&arr)[n]) : size{ n }, capacity{ n }
-{
-    this->ptr = new data * [n];
-    for(size_t i = 0; i &lt; this->capacity; ++i)
-        this->ptr[i] = new data(arr[i]);
-}
-
-/*Cách gọi*/
-void main()
-{
-    int a[5]{1, 3, 7, 2, 4};
-    arraylist&lt;int&gt; arr(a);   //Tạo mảng từ mảng khác
-}</p></div>
-
-                    - Khởi tạo sao chép từ initializer_list của C++, khai báo thêm thư viện &lt;initializer_list&gt;.
-                    Sử dụng hai phương thức size() để lấy số phần tử và begin() để trỏ vào phần tử đầu tiên, gán capacity bằng với số phần tử trong đó.<br>
-                    Độ phức tạp thời gian là O(n).
-
-                    <div class="scripts"><p id="editor4">#include&lt;initializer_list&gt;
-arraylist(std::initializer_list&lt;data&gt; list) :
-    size{ list.size() }, capacity{ list.size() }
-{
-    this->ptr = new data * [this->capacity];
-
-    const data* pointer = list.begin();
-    for(size_t i = 0; i &lt; this->capacity; ++i)
-        this->ptr[i] = new data(pointer[i]);
-}
-
-/*Cách gọi*/
-void main()
-{
-    arraylist&lt;int&gt; arr({1, 3, 7, 2, 4});   //Tạo mảng từ initializer_list
-}</p></div>
-
-                    - Hàm khởi tạo sao chép, sao chép tài nguyên từ đối tượng nguồn.
-                    Để ý rằng nửa đoạn [size, capacity) sẽ không có phần tử, nên ta sẽ gán bằng giá trị <b>nullptr</b>.<br>
-                    Độ phức tạp thời gian là O(n).
-                    <div class="scripts"><p id="editor5">arraylist(const arraylist& source) :
-    size{ source.size }, capacity{ source.capacity }
-{
-    this->ptr = new data * [this->capacity];
-
-    for(size_t i = 0; i &lt; this->size; ++i)
-        this->ptr[i] = new data(*source.ptr[i]);
-    for(size_t i = this->size; i < this->capacity; ++i)
-        this->ptr[i] = nullptr;
-}
-
-/*Cách gọi*/
-void main()
-{
-    arraylist&lt;int&gt; source({1, 3, 7, 2, 4});
-    arraylist&lt;int&gt; arr(source);   //Khởi tạo sao chép từ source
-}</p></div>
-
-                    - Hàm khởi tạo chuyển đổi tài nguyên ( move segmantic ) : được gọi khi đối tượng lấy làm tham số có vòng đời ngắn, sẽ bị giải phóng sau khi ra khỏi hàm, ta sẽ thực hiện chuyển đổi dữ liệu thay vì sao chép lại tất cả.
-                    Điều đó làm giảm đáng kể những thao tác dư thừa, giúp tốc độ của chương trình nhanh hơn. Có thể hiểu ta sẽ thực hiện hoán vị hai mảng.<br>
-                    Thường có độ phức tạp thời gian là O(1).
-
-                    <div class="scripts"><p id="editor6">arraylist(arraylist&& source) noexcept :
-    size{ source.size }, capacity{ source.capacity }
-{
-    this->ptr = source.ptr;
-    source.ptr = nullptr;
-}
-
-/*Cách gọi*/
-void main()
-{
-    //Tạo mảng từ đối tượng có vòng đời ngắn ( giá trị rvalue )
-    arraylist&lt;int&gt; arr(arraylist&lt;int&gt;({2, 5, 5, 1, 6}));
-}</p></div>
-
-                    Trong đó, source là đối tượng nguồn, do vòng đời ngắn nên sẽ được giải phóng ngay sau khi ra khỏi hàm, thay vì tạo mới cả mảng, ta sẽ lấy luôn dữ liệu mà source đang giữ.
-                </p>
-
-                <h3 id="hamhuy" style="margin-top:20px; border-top:2px solid black;">Hàm hủy</h3>
-                <p>
-                    - Hàm hủy được dùng để giải phóng tài nguyên, tự động được gọi khi đối tượng bị giải phóng.
-
-                    <div class="scripts"><p id="editor7">~arraylist()
-{
-    if(this->ptr == nullptr)
-        return;
-    
-    for(size_t i = 0; i < this->size; ++i)
-        delete this->ptr[i];
-    delete[] this->ptr;
-}
-
-/*Cách gọi*/
-void main()
-{
-    //Tạo mảng từ đối tượng có vòng đời ngắn ( giá trị rvalue )
-    arraylist&lt;int&gt; arr(arraylist&lt;int&gt;({2, 5, 5, 1, 6}));
-}</p></div>
-                    Đầu tiên ta giải phóng các phần tử trong nửa đoạn [0, size), sau đó mới giải phóng mảng con trỏ.
-                    Hãy để ý hàm khởi tạo chuyển đổi tài nguyên, ta gán source.ptr bằng giá trị <b>nullptr</b>, vì thế phải kiểm tra ptr có null không rồi mới đi giải phóng.
-                </p>
-
-                </ul>
             </div>
         </div>
-
-
-        
-        <script>
-            setEditor('editor1', '400px', '160px');
-            setEditor('editor2', '520px', '280px');
-            setEditor('editor3', '600px', '310px');
-            setEditor('editor4', '800px', '350px');
-            setEditor('editor5', '720px', '375px');
-            setEditor('editor6', '720px', '290px');
-            setEditor('editor7', '720px', '350px');
-        </script>
     </body>
+
+    <script>
+        setEditor('editor1', '600px', '450px');
+        setEditor('editor2', '500px', '450px');
+        setEditor('editor3', '550px', '300px');
+        setEditor('editor4', '680px', '350px');
+        setEditor('editor5', '600px', '550px');
+    </script>
 </html>
