@@ -1,0 +1,62 @@
+.name{
+    color:rgb(153, 182, 210);
+}
+
+.btnname:hover{
+    background-color:rgb(153, 182, 210);
+    color:black;
+}
+
+.cmt{
+    color:rgb(34, 205, 34);
+}
+
+.btncmt:hover{
+    background-color:rgb(34, 205, 34);
+    color:black;
+}
+
+.str{
+    color:rgb(186, 156, 99);
+}
+
+.btnstr:hover{
+    background-color:rgb(186, 156, 99);
+    color:black;
+}
+
+.char{
+    color:grey;
+}
+
+.btnchar:hover{
+    background-color:grey;
+    color:black;
+}
+
+.func{
+    color:rgb(203, 242, 131);
+}
+
+.btnfunc:hover{
+    background-color:rgb(203, 242, 131);
+    color:black;
+}
+
+.struct{
+    color:rgb(57, 231, 112);
+}
+
+.btnstruct:hover{
+    background-color:rgb(57, 231, 112);
+    color:black;
+}
+
+.old-type{
+    color:rgb(45, 45, 198);
+}
+
+.btnold-type:hover{
+    background-color:rgb(45, 45, 198);
+    color:black;
+}

@@ -1,0 +1,86 @@
+*{
+    margin:0;
+}
+
+html {
+    height: 100%;
+}
+ 
+body {
+    height: 100%;
+    margin: 0;
+    font-family:jetbrains;
+    font-size: 20px;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.screen{
+    margin:0;
+    height:100%;
+    background-color: rgb(37, 5, 37);
+    
+}
+
+.include{
+    display:inline-flex;
+    width:100%;
+    height:100%;
+}
+
+.tab{
+    margin:0;
+    height:100%;
+    padding:30px 20px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow: auto;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+}
+
+.tab::-webkit-scrollbar { 
+    width: 0 !important;
+    display: none; 
+}
+
+@font-face {
+    font-family: jetbrains;
+    src: url(../JetBrainsMono-ExtraLight.ttf);
+}
+
+.frame{
+    width:auto;
+    background-color: rgb(124, 216, 201);
+    border-left:10px solid rgb(83, 84, 84);
+    padding: 0 15px;
+    color:rgb(60, 0, 95);
+    margin-bottom:10px;
+}
+
+.card{
+    width:60%;
+    height:auto;
+    margin:10px auto;
+    border-radius: 20px;
+    padding:15px;
+    box-sizing:border-box;
+    word-wrap: break-word;
+    overflow: auto;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+}
+
+.card::-webkit-scrollbar { 
+    width: 0 !important;
+    display: none; 
+}
+
+.card:hover{
+    opacity:80%;
+}
