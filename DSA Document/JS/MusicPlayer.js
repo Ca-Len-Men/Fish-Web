@@ -58,7 +58,6 @@ class UI {
 
   // load detail song when page loaded
   loadSong(music) {
-    console.log(music)
     audio.src = `MP3/${music[0]}.mp3`;
 
     this.getDuration(audio).then((time) => {
@@ -123,13 +122,11 @@ function eventListeners() {
   for(let i = 0; i < listMusic.length; ++i){
       songs_event[i].addEventListener("click", function() {
         index = parseInt(songs_event[i].getAttribute('data-index'))
-        console.log(index)
         ui.selectSong(index)
       })
     }
 
   loop_music.addEventListener("click", function(){
-    console.log(ui.loop)
     if(ui.loop)
       loop_music.textContent = '[Loop]'
     else
