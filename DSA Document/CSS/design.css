@@ -67,7 +67,7 @@ body {
     position: relative;
     width:60%;
     height:auto;
-    margin:10px auto;
+    margin:15px auto;
     border-radius: 20px;
     padding:15px;
     box-sizing:border-box;
@@ -114,7 +114,7 @@ body {
     top:0;
     left:-50%;
     background: rgba(198, 184, 184, 0.1);
-    transition:0.5s;
+    transition:1s;
 }
 
 .card:hover:after{
@@ -127,10 +127,26 @@ body {
     transition:0.5s;
 }
 
-.box-show{
+.hidden{
     display:none;
 }
 
-.button-show:hover{
-    transform: rotate(90deg);
+.box-animation-show{
+    transform-origin: top;
+    animation: show 0.5s linear;
+}
+
+.box-animation-hidden{
+    transform-origin: top;
+    animation: hidden 1s linear;
+}
+
+@keyframes show{
+    from { transform: scaleY(0);}
+    to { transform: scaleY(100%); }
+}
+
+@keyframes hidden{
+    from { transform: scaleY(100%);}
+    to { transform: scaleY(0); }
 }
