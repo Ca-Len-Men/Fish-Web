@@ -27,20 +27,74 @@
             <span class="char">[Battle caro with me in Facebook uwu]</span>
         </div>
 
-        <div class="tab" style="width:50%;">
-          <p style="font-size:40px; color:rgb(156, 213, 1);">Documentation : DSACPP</p>
+        <div class="tab page mainpage" style="width:50%;">
+          <p style="font-size:40px; color:rgb(193, 238, 71);">Documentation : DSACPP</p>
 
-          <div class="card" style="background-image: linear-gradient(to bottom, rgb(99, 11, 150), rgb(72, 7, 110));">
-              <span style="margin:auto 0; font-size:30px; color:rgb(53, 175, 212);">Tuple</span>
+          <div class="card" data-test="1" style="background-image: linear-gradient(to bottom, rgb(99, 11, 150), rgb(72, 7, 110));">
+              <span style="margin:auto 0; font-size:30px; color:rgb(106, 211, 243);">Tuple</span>
 
-              <img class="button-show" src="Picture/flicker.png" style="width:30px; height:30px;"><br>
-              <div class="box-show">
+              <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+              <div class="box-show hidden">
                 <p style="color:white;">Return multiple values.<br>
                   Assign multiple values ​​to multiple variables.<br>
                   Alternative to struct.<br>
                   The more tuple types declared, the larger the program source code.<br>
                   Search with keyword : <i>Variadic Templates.</i></p>
               </div>
+          </div>
+
+          <div class="card" data-test="1" style="background-image: linear-gradient(to bottom, rgb(105, 86, 117), rgb(91, 57, 111));">
+            <span style="margin:auto 0; font-size:30px; color:rgb(0, 239, 195);">Array List</span>
+
+            <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+            <div class="box-show hidden">
+              <p style="color:white;">Stores a contiguous sequence of variables of the same type.<br>
+                Support important methods on Array List.<br>
+                Speed up methods involving swap.<br>
+                Search with keyword : <i>Dynamic Array.</i></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab page hidden" style="width:50%;">
+          <p style="font-size:40px; color:rgb(255, 209, 149);">Documentation : Tuple</p>
+          <span class="char btnchar back-page">[Back]</span> <a class="char btnchar" href="https://github.com/Ca-Len-Men/DataStructure/blob/Object/tuple.h" target="_blank">[Source]</a>
+
+          <div class="card" style="background-color:#2d2d30;">
+              <span style="margin:auto 0; font-size:25px; color:rgb(53, 175, 212);">Return multiple values</span>
+
+              <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+              <div class="box-show hidden char">
+                <span class="old-type">auto</span> <span class="func">AddPoint</span>(<span class="old-type">int</span> x1,
+                <span class="old-type">int</span> y1, <span class="old-type">int</span> x2, <span class="old-type">int</span> y2) {<br>
+                  &emsp;<span class="return">return</span> <span class="struct">tuple</span>&lt;<span class="old-type">int</span>, <span class="old-type">int</span>&gt;(x1 + x2, y1 + y2);<br>
+                }</span>
+              </div>
+          </div>
+
+          <div class="card" style="background-color:#2d2d30;">
+            <span style="margin:auto 0; font-size:25px; color:rgb(53, 175, 212);">Assign multiple values</span>
+
+            <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+            <div class="box-show hidden char">
+              <span class="old-type">int</span> <span class="name">x</span>, <span class="name">y</span>;<br>
+              <span class="struct">tuple</span>&lt;<span class="old-type">int</span>, <span class="old-type">int</span>
+              &gt;(1, 5).<span class="func">convert</span>(<span class="name">x</span>
+              , <span class="name">y</span>);
+            </div>
+          </div>
+
+          <div class="card" style="background-color:#2d2d30;">
+            <span style="margin:auto 0; font-size:25px; color:rgb(53, 175, 212);">Swap multiple variables</span>
+
+            <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+            <div class="box-show hidden char">
+              <span class="old-type">int</span> <span class="name">a</span> = 3, <span class="name">b</span> </span>= 5, <span class="name">c</span> = 2;<br>
+              <span class="struct">tuple</span>&lt;<span class="old-type">int</span>
+              , <span class="old-type">int</span>, <span class="old-type">int</span>&gt;(<span class="name">a</span>, <span class="name">b</span>, <span class="name">c</span>).</span>
+              <span class="func">convert</span>(<span class="name">a</span>, <span class="name">b</span>, <span class="name">c</span>)<br>
+              <span class="cmt">// a = 5, b = 2, c = 3</span>
+            </div>
           </div>
         </div>
 
