@@ -43,8 +43,20 @@
               </div>
           </div>
 
+          <div class="card" data-test="1" style="background-image: linear-gradient(to bottom, rgb(6, 177, 220), rgb(91, 57, 111));">
+            <span style="margin:auto 0; font-size:30px; color:rgb(203, 198, 108);">Range</span>
+
+            <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+            <div class="box-show hidden">
+              <p style="color:white;">Learning from Python's 'range' class.<br>
+                For loop with 'range', easy to used.<br>
+                Speed up for loop with reference variable.<br>
+                Search with keyword : <i>Range of Python.</i></p>
+            </div>
+          </div>
+
           <div class="card" data-test="1" style="background-image: linear-gradient(to bottom, rgb(105, 86, 117), rgb(91, 57, 111));">
-            <span style="margin:auto 0; font-size:30px; color:rgb(222, 117, 236);">Array List</span>
+            <span style="margin:auto 0; font-size:30px; color:rgb(124, 208, 219);">Array List</span>
 
             <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
             <div class="box-show hidden">
@@ -55,6 +67,8 @@
             </div>
           </div>
         </div>
+
+
 
         <div class="tab page hidden" style="width:50%;">
           <p style="font-size:40px; color:rgb(255, 209, 149);">Documentation : Tuple</p>
@@ -111,6 +125,40 @@
               <span class="func">convert</span>(<span class="name">a</span>, <span class="name">b</span>, <span class="name">c</span>)<br>
               <span class="cmt">// a = 5, b = 2, c = 3</span>
               <p style="color:white;">Use the 'convert' method to swap in any order.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab page hidden" style="width:50%;">
+          <p style="font-size:40px; color:rgb(150, 200, 250);">Documentation : Range</p>
+          <span class="char btnchar back-page">[Back]</span> <a class="char btnchar" href="#" target="_blank">[Source]</a>
+
+          <div class="card" style="background-color:#2d2d30;">
+            <span style="margin:auto 0; font-size:25px; color:rgb(153, 183, 254);">Declare and use</span>
+
+            <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+            <div class="box-show hidden char">
+              <span class="struct">range</span> <span class="name">ran</span>(0, 5, 2);<br>
+              <span class="struct">std::cout</span> &lt;&lt; <span class="name">ran</span>;&emsp;<span class="cmt">// (0, 5, 2)</span>
+              <p style="color:white;">With start = 0, end = 5, step = 2</p>
+            </div>
+          </div>
+
+          <div class="card" style="background-color:#2d2d30;">
+            <span style="margin:auto 0; font-size:25px; color:rgb(153, 183, 254);">For loop with range</span>
+
+            <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+            <div class="box-show hidden char">
+              for(<span class="old-type">int</span> i : <span class="struct">range</span>(5))<br>
+              &emsp;<span class="struct">std::cout</span> &lt;&lt; i &lt;&lt; <span class="str">' '</span>;
+              &emsp;<span class="cmt">// 0 1 2 3 4</span><br>
+              for(<span class="old-type">int</span> i : <span class="struct">range</span>(2, 5))<br>
+              &emsp;<span class="struct">std::cout</span> &lt;&lt; i &lt;&lt; <span class="str">' '</span>;
+              &emsp;<span class="cmt">// 2 3 4</span><br>
+              for(<span class="old-type">int</span>& i : <span class="struct">range</span>(0, 5, 2))<br>
+              &emsp;<span class="struct">std::cout</span> &lt;&lt; i &lt;&lt; <span class="str">' '</span>;
+              &emsp;<span class="cmt">// 0 2 4</span><br>
+              <p style="color:white;">Use reference to optimizing the range loop, like case 3.<br>Example : for(int& i : range(...))</p>
             </div>
           </div>
         </div>
