@@ -7,7 +7,7 @@
     <title>DSACPP</title>
     <link rel="stylesheet" href="CSS/design.css">
     <link rel="stylesheet" href="CSS/color.css">
-    <link rel="shortcut icon" type="image/png" href="C++.png"/>
+    <link rel="shortcut icon" type="image/png" href="Picture/C++.png"/>
   </head>
 
   <body>
@@ -25,29 +25,30 @@
             <span class="frame">My social network</span><br>
             <span class="cmt btncmt">[Github]</span><br>
             <span class="func btnfunc"">[Facebook]</span><br>
-            <span class="char">[Battle caro with me in Facebook uwu]</span>
+            <span class="char">[Battle caro with me on Facebook uwu]</span>
         </div>
 
         <div class="tab page mainpage" style="width:50%;">
           <p style="font-size:40px; color:rgb(193, 238, 71);">Documentation : DSACPP</p>
 
-          <div class="card" data-test="1" style="background-image: linear-gradient(to bottom, rgb(99, 11, 150), rgb(72, 7, 110));">
+          <div class="card" data-test="1" style="background-image:linear-gradient(to bottom, rgb(99, 11, 150), rgb(72, 7, 110));">
               <span style="margin:auto 0; font-size:30px; color:rgb(106, 211, 243);">Tuple</span>
-
               <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
               <div class="box-show hidden">
                 <p style="color:white;">Return multiple values.<br>
                   Assign multiple values ​​to multiple variables.<br>
                   Alternative to struct.<br>
                   The more tuple types declared, the larger the program source code.<br>
+                  Does not support iterator.<br>
                   Search with keyword : <i>Variadic Templates.</i></p>
               </div>
           </div>
 
           <div class="card" data-test="1" style="background-image: linear-gradient(to bottom, rgb(6, 177, 220), rgb(91, 57, 111));">
             <span style="margin:auto 0; font-size:30px; color:rgb(203, 198, 108);">Range</span>
-
             <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
             <div class="box-show hidden">
               <p style="color:white;">Learning from Python's 'range' class.<br>
                 For loop with 'range', easy to used.<br>
@@ -56,10 +57,47 @@
             </div>
           </div>
 
+          <div class="card" data-test="1" style="background-image: linear-gradient(to bottom, rgb(6, 177, 220), rgb(91, 57, 111));">
+            <span style="margin:auto 0; font-size:30px; color:rgb(241, 255, 42);">Heap</span>
+            <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
+            <div class="box-show hidden">
+              <p style="color:white;">Create heap from any container.<br>
+                Sort any container using heap.<br>
+                Build-heap with static method.<br>
+                Search with keyword : <i>Heap Array.</i></p>
+            </div>
+          </div>
+
+          <div class="card" data-test="1" style="background-image: linear-gradient(to bottom, rgb(255, 73, 137), rgb(231, 70, 249));">
+            <span style="margin:auto 0; font-size:30px; color:rgb(32, 46, 75);">Stack</span>
+            <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
+            <div class="box-show hidden">
+              <p style="color:white;">Containers operate on the principle of last in, first out.<br>
+                Stores a linked list of variables of the same type.<br>
+                Alternative to recursion.<br>
+                Depth First Search.<br>
+                Search with keyword : <i>Stack.</i></p>
+            </div>
+          </div>
+
+          <div class="card" data-test="1" style="background-image: linear-gradient(to bottom, rgb(104, 250, 221), rgb(54, 140, 180));">
+            <span style="margin:auto 0; font-size:30px; color:rgb(109, 14, 160);">Queue</span>
+            <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
+            <div class="box-show hidden">
+              <p style="color:white;">Containers operate on the principle of first in, first out.<br>
+                Stores a linked list of variables of the same type.<br>
+                Breadth First Search.<br>
+                Search with keyword : <i>Queue.</i></p>
+            </div>
+          </div>
+
           <div class="card" data-test="1" style="background-image: linear-gradient(to bottom, rgb(105, 86, 117), rgb(91, 57, 111));">
             <span style="margin:auto 0; font-size:30px; color:rgb(124, 208, 219);">Array List</span>
-
             <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
             <div class="box-show hidden">
               <p style="color:white;">Stores a contiguous sequence of variables of the same type.<br>
                 Support important methods on Array List.<br>
@@ -76,9 +114,9 @@
           <span class="char btnchar back-page">[Back]</span> <a class="char btnchar" href="https://github.com/Ca-Len-Men/DataStructure/blob/Object/tuple.h" target="_blank">[Source]</a>
 
           <div class="card" style="background-color:#2d2d30;">
-            <span style="margin:auto 0; font-size:25px; color:rgb(53, 175, 212);">Declare and use</span>
-
+            <span class="title" style="color:rgb(53, 175, 212);">Declare and use</span>
             <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+            
             <div class="box-show hidden char">
               <span class="struct">tupe</span> &lt;<span class="old-type">int</span>, <span class="old-type">char</span>, <span class="struct">std::string</span>&gt; <span class="name">tup</span>
               (5, <span class="str">'c'</span>, <span class="str">"World"</span>)<br>
@@ -90,9 +128,9 @@
           </div>
 
           <div class="card" style="background-color:#2d2d30;">
-              <span style="margin:auto 0; font-size:25px; color:rgb(53, 175, 212);">Return multiple values</span>
-
+              <span class="title" style="color:rgb(53, 175, 212);">Return multiple values</span>
               <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
               <div class="box-show hidden char">
                 <span class="old-type">auto</span> <span class="func">AddPoint</span>(<span class="old-type">int</span> x1,
                 <span class="old-type">int</span> y1, <span class="old-type">int</span> x2, <span class="old-type">int</span> y2) {<br>
@@ -103,9 +141,9 @@
           </div>
 
           <div class="card" style="background-color:#2d2d30;">
-            <span style="margin:auto 0; font-size:25px; color:rgb(53, 175, 212);">Assign multiple values</span>
-
+            <span class="title" style="color:rgb(53, 175, 212);">Assign multiple values</span>
             <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
             <div class="box-show hidden char">
               <span class="old-type">int</span> <span class="name">x</span>, <span class="name">y</span>;<br>
               <span class="struct">tuple</span>&lt;<span class="old-type">int</span>, <span class="old-type">int</span>
@@ -116,9 +154,9 @@
           </div>
 
           <div class="card" style="background-color:#2d2d30;">
-            <span style="margin:auto 0; font-size:25px; color:rgb(53, 175, 212);">Swap multiple variables</span>
-
+            <span class="title" style="color:rgb(53, 175, 212);">Swap multiple variables</span>
             <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
             <div class="box-show hidden char">
               <span class="old-type">int</span> <span class="name">a</span> = 3, <span class="name">b</span> </span>= 5, <span class="name">c</span> = 2;<br>
               <span class="struct">tuple</span>&lt;<span class="old-type">int</span>
@@ -132,34 +170,216 @@
 
         <div class="tab page hidden" style="width:50%;">
           <p style="font-size:40px; color:rgb(150, 200, 250);">Documentation : Range</p>
-          <span class="char btnchar back-page">[Back]</span> <a class="char btnchar" href="#" target="_blank">[Source]</a>
+          <span class="char btnchar back-page">[Back]</span> <a class="char btnchar" href="https://github.com/Ca-Len-Men/DataStructure/blob/Object/range.h" target="_blank">[Source]</a>
 
           <div class="card" style="background-color:#2d2d30;">
-            <span style="margin:auto 0; font-size:25px; color:rgb(153, 183, 254);">Declare and use</span>
-
+            <span class="title" style="color:rgb(153, 183, 254);">Declare and use</span>
             <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
             <div class="box-show hidden char">
               <span class="struct">range</span> <span class="name">ran</span>(0, 5, 2);<br>
               <span class="struct">std::cout</span> &lt;&lt; <span class="name">ran</span>;&emsp;<span class="cmt">// (0, 5, 2)</span>
-              <p style="color:white;">With start = 0, end = 5, step = 2</p>
+              <p style="color:white;">With start = 0, end = 5, step = 2.</p>
             </div>
           </div>
 
           <div class="card" style="background-color:#2d2d30;">
-            <span style="margin:auto 0; font-size:25px; color:rgb(153, 183, 254);">For loop with range</span>
-
+            <span class="title" style="color:rgb(153, 183, 254);">For loop with range</span>
             <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
             <div class="box-show hidden char">
-              for(<span class="old-type">int</span> i : <span class="struct">range</span>(5))<br>
-              &emsp;<span class="struct">std::cout</span> &lt;&lt; i &lt;&lt; <span class="str">' '</span>;
-              &emsp;<span class="cmt">// 0 1 2 3 4</span><br>
-              for(<span class="old-type">int</span> i : <span class="struct">range</span>(2, 5))<br>
-              &emsp;<span class="struct">std::cout</span> &lt;&lt; i &lt;&lt; <span class="str">' '</span>;
-              &emsp;<span class="cmt">// 2 3 4</span><br>
-              for(<span class="old-type">int</span>& i : <span class="struct">range</span>(0, 5, 2))<br>
-              &emsp;<span class="struct">std::cout</span> &lt;&lt; i &lt;&lt; <span class="str">' '</span>;
-              &emsp;<span class="cmt">// 0 2 4</span><br>
-              <p style="color:white;">Use reference to optimizing the range loop, like case 3.<br>Example : for(int& i : range(...))</p>
+              <span class="syntax">for</span>(<span class="old-type">int</span> i : <span class="struct">range</span>(5))<br>
+              &emsp;<span class="struct">std::cout</span> &lt;&lt; i &lt;&lt; <span class="str">' '</span>;<br>
+              <span class="cmt">// 0 1 2 3 4</span><br>
+              <span class="syntax">for</span>(<span class="old-type">int</span> i : <span class="struct">range</span>(2, 5))<br>
+              &emsp;<span class="struct">std::cout</span> &lt;&lt; i &lt;&lt; <span class="str">' '</span>;<br>
+              <span class="cmt">// 2 3 4</span><br>
+              <span class="syntax">for</span>(<span class="old-type">int</span> i : <span class="struct">range</span>(0, 5, 2))<br>
+              &emsp;<span class="struct">std::cout</span> &lt;&lt; i &lt;&lt; <span class="str">' '</span>;<br>
+              <span class="cmt">// 0 2 4</span><br>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab page hidden" style="width:50%;">
+          <p style="font-size:40px; color:rgb(222, 196, 142);">Documentation : Heap</p>
+          <span class="char btnchar back-page">[Back]</span> <a class="char btnchar" href="https://github.com/Ca-Len-Men/DataStructure/blob/Object/heap.h" target="_blank">[Source]</a>
+
+          <div class="card" style="background-color:#2d2d30;">
+            <span class="title" style="color:rgb(53, 175, 212);">Declare and use</span>
+            <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
+            <div class="box-show hidden char">
+              <span class="struct">minheap</span>&lt;<span class="old-type">int</span>&gt; <span class="name">heap1</span>{2, 5, 1, 4, 6};<br>
+              <span class="struct">std::cout</span> &lt;&lt; <span class="name">heap1</span>;&emsp;<span class="cmt">// [1, 4, 2, 5, 6]</span><br><br>
+
+              <span class="old-type">int</span> <span class="name">a</span>[]{2, 5, 1, 4, 6};<br>
+              <span class="struct">maxheap</span>&lt;<span class="old-type">int</span>&gt; <span class="name">heap2</span>(<span class="name">a</span>, <span class="name">a</span> + 5);<br>
+              <span class="struct">std::cout</span> &lt;&lt; <span class="name">heap2</span>;&emsp;<span class="cmt">// [6, 2, 1, 4, 5]</span>
+              <p style="color:white;">Don't name the variable 'heap' because there is already a class named 'heap'.<br>
+              The cost of creating heap from another container is O(n log n), but O(n) if that is the best case.</p>
+            </div>
+          </div>
+
+          <div class="card" style="background-color:#2d2d30;">
+            <span class="title" style="color:rgb(53, 175, 212);">Sort array using heap</span>
+            <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
+            <div class="box-show hidden char">
+              <span class="old-type">int</span> <span class="name">a</span>[]{2, 5, 1, 4, 6}, <span class="name">n</span> = 5;<br>
+              <span class="struct">minheap</span>&lt;<span class="old-type">int</span>&gt; <span class="name">heap1</span>(<span class="name">a</span>, <span class="name">a</span> + <span class="name">n</span>);<br>
+              <br>
+              <span class="syntax">for</span>(<span class="old-type">int</span> <span class="name">i</span> = 0; <span class="name">i</span> &lt; <span class="name">n</span>; ++<span class="name">i</span>)<br>
+              &emsp;<span class="name">a</span>[<span class="name">i</span>] = <span class="name">heap1</span>.<span class="func">pop</span>();<br>
+              <span class="syntax">for</span>(<span class="old-type">int</span> <span class="name">i</span> : <span class="name">a</span>)<br>
+              &emsp;<span class="struct">std::cout</span> &lt;&lt; <span class="name">i</span> &lt;&lt; <span class="str">' '</span>;&emsp;<span class="cmt">// 1 2 4 5 6</span>
+              <p style="color:white;">Don't name the variable 'heap' because there is already a class named 'heap'.<br>
+              Time complexity of creating heap from another container is O(n log n), but O(n) if that is the best case.</p>
+            </div>
+          </div>
+
+          <div class="card" style="background-color:#2d2d30;">
+            <span class="title" style="color:rgb(53, 175, 212);">Build heap</span>
+            <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
+            <div class="box-show hidden char">
+              <span class="old-type">int</span> <span class="name">a</span>[]{2, 5, 1, 4, 6}, <span class="name">n</span> = 5;<br>
+              <span class="old-type">auto</span> <span class="name">less_than</span> = [](<span class="old-type">int</span> x, <span class="old-type">int</span> y){ <span class="return">return</span> x &lt; y; };
+              <span class="struct">heap</span>&lt;<span class="old-type">int</span>&gt;::<span class="func">build_heap</span>(<span class="name">a</span>, <span class="name">n</span>, <span class="name">less_than</span>);<br>
+
+              <span class="syntax">for</span>(<span class="old-type">int</span> <span class="name">i</span> : <span class="name">a</span>)<br>
+              &emsp;<span class="struct">std::cout</span> &lt;&lt; <span class="name">i</span> &lt;&lt; <span class="str">' '</span>;&emsp;<span class="cmt">// 1 4 2 5 6</span>
+              <p style="color:white;">Build min heap by static method of heap class using less_than function, time complexity is O(n log n) or O(n).</p>
+            </div>
+          </div>
+
+          <div class="card" style="background-color:#2d2d30;">
+            <span class="title" style="color:rgb(53, 175, 212);">Methods</span>
+            <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
+            <div class="box-show hidden char">
+              <table border="1px solid white" style="width:100%; color:white; text-align:center;">
+                <tr><th rowspan="2">Methods</th><th colspan="3">Time Complexity</th></tr>
+                <tr><th>Worst</th><th>Average</th><th>Best</th></tr>
+
+                <tr><td>push</td><td>O(n)</td><td>O(log n)</td><td>O(1)</td></tr>
+                <tr><td class="warning">pop</td><td>O(n)</td><td colspan="2">O(log n)</td></tr>
+                <tr><td>try_pop</td><td>O(n)</td><td colspan="2">O(log n)</td></tr>
+                <tr><td class="warning">top</td><td colspan="3">O(1)</td></tr>
+                <tr><td>clear</td><td colspan="3">O(n)</td></tr>
+                <tr><td>out</td><td colspan="3">O(n)</td></tr>
+                <tr><td>empty</td><td colspan="3">O(1)</td></tr>
+                <tr><td>swap</td><td colspan="3">O(1)</td></tr>
+                <tr><td>operator bool</td><td colspan="3">O(1)</td></tr>
+                <tr><td>operator=</td><td colspan="2">O(n)</td><td>O(1)</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab page hidden" style="width:50%;">
+          <p style="font-size:40px; color:rgb(136, 180, 188);">Documentation : Stack</p>
+          <span class="char btnchar back-page">[Back]</span> <a class="char btnchar" href="https://github.com/Ca-Len-Men/DataStructure/blob/Object/limitlist.h" target="_blank">[Source]</a>
+
+          <div class="card" style="background-color:#2d2d30;">
+            <span class="title" style="color:rgb(153, 183, 254);">Declare and use</span>
+            <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
+            <div class="box-show hidden char">
+              <span class="struct">stack</span>&lt;<span class="old-type">int</span>&gt; <span class="name">st</span>;<br>
+              <span class="syntax">for</span>(<span class="old-type">int</span> <span class="name">i</span> = 0; <span class="name">i</span> &lt; 5; ++<span class="name">i</span>)<br>
+              &emsp;<span class="name">st</span>.<span class="func">push</span>(<span class="name">i</span>);<br>
+              <span class="struct">std::cout</span> &lt;&lt; <span class="name">st</span>;<br>
+              <span class="cmt">// [4, 3, 2, 1, 0]</span>
+              <p style="color:white;">The last input element is added to the top.</p>
+            </div>
+          </div>
+
+          <div class="card" style="background-color:#2d2d30;">
+            <span class="title" style="color:rgb(153, 183, 254);">For loop with Stack</span>
+            <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
+            <div class="box-show hidden char">
+              <span class="syntax">for</span>(<span class="old-type">int</span> <span class="name">i</span> : <span class="struct">st</span>)<br>
+              &emsp;<span class="struct">std::cout</span> &lt;&lt; <span class="name">i</span> &lt;&lt; <span class="str">' '</span>;<br>
+              <span class="cmt">// 4 3 2 1 0</span><br>
+            </div>
+          </div>
+
+          <div class="card" style="background-color:#2d2d30;">
+            <span class="title" style="color:rgb(53, 175, 212);">Methods</span>
+            <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
+            <div class="box-show hidden char">
+              <table border="1px solid white" style="width:100%; color:white; text-align:center;">
+                <tr><th rowspan="2">Methods</th><th colspan="3">Time Complexity</th></tr>
+                <tr><th>Worst</th><th>Average</th><th>Best</th></tr>
+
+                <tr><td>push</td><td colspan="3">O(1)</td></tr>
+                <tr><td class="warning">pop</td><td colspan="3">O(1)</td></tr>
+                <tr><td>try_pop</td><td colspan="3">O(1)</td></tr>
+                <tr><td class="warning">top</td><td colspan="3">O(1)</td></tr>
+                <tr><td>clear</td><td colspan="3">O(n)</td></tr>
+                <tr><td>out</td><td colspan="3">O(n)</td></tr>
+                <tr><td>empty</td><td colspan="3">O(1)</td></tr>
+                <tr><td>swap</td><td colspan="3">O(1)</td></tr>
+                <tr><td>operator bool</td><td colspan="3">O(1)</td></tr>
+                <tr><td>operator=</td><td colspan="2">O(n)</td><td>O(1)</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab page hidden" style="width:50%;">
+          <p style="font-size:40px; color:rgb(255, 124, 150);">Documentation : Queue</p>
+          <span class="char btnchar back-page">[Back]</span> <a class="char btnchar" href="https://github.com/Ca-Len-Men/DataStructure/blob/Object/limitlist.h" target="_blank">[Source]</a>
+
+          <div class="card" style="background-color:#2d2d30;">
+            <span class="title" style="color:rgb(153, 183, 254);">Declare and use</span>
+            <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
+            <div class="box-show hidden char">
+              <span class="struct">queue</span>&lt;<span class="old-type">int</span>&gt; <span class="name">qu</span>;<br>
+              <span class="syntax">for</span>(<span class="old-type">int</span> <span class="name">i</span> = 0; <span class="name">i</span> &lt; 5; ++<span class="name">i</span>)<br>
+              &emsp;<span class="name">qu</span>.<span class="func">push</span>(<span class="name">i</span>);<br>
+              <span class="struct">std::cout</span> &lt;&lt; <span class="name">qu</span>;
+              <br><span class="cmt">// [0, 1, 2, 3, 4]</span>
+              <p style="color:white;">The last input element is added at the end.</p>
+            </div>
+          </div>
+
+          <div class="card" style="background-color:#2d2d30;">
+            <span class="title" style="color:rgb(153, 183, 254);">For loop with Queue</span>
+            <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
+            <div class="box-show hidden char">
+              <span class="syntax">for</span>(<span class="old-type">int</span> <span class="name">i</span> : <span class="struct">qu</span>)<br>
+              &emsp;<span class="struct">std::cout</span> &lt;&lt; <span class="name">i</span> &lt;&lt; <span class="str">' '</span>;<br>
+              <span class="cmt">// 0 1 2 3 4</span><br>
+            </div>
+          </div>
+
+          <div class="card" style="background-color:#2d2d30;">
+            <span class="title" style="color:rgb(53, 175, 212);">Methods</span>
+            <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
+
+            <div class="box-show hidden char">
+              <table border="1px solid white" style="width:100%; color:white; text-align:center;">
+                <tr><th rowspan="2">Methods</th><th colspan="3">Time Complexity</th></tr>
+                <tr><th>Worst</th><th>Average</th><th>Best</th></tr>
+
+                <tr><td>push</td><td colspan="3">O(1)</td></tr>
+                <tr><td class="warning">pop</td><td colspan="3">O(1)</td></tr>
+                <tr><td>try_pop</td><td colspan="3">O(1)</td></tr>
+                <tr><td class="warning">top</td><td colspan="3">O(1)</td></tr>
+                <tr><td class="warning">bottom</td><td colspan="3">O(1)</td></tr>
+                <tr><td>clear</td><td colspan="3">O(n)</td></tr>
+                <tr><td>out</td><td colspan="3">O(n)</td></tr>
+                <tr><td>empty</td><td colspan="3">O(1)</td></tr>
+                <tr><td>swap</td><td colspan="3">O(1)</td></tr>
+                <tr><td>operator bool</td><td colspan="3">O(1)</td></tr>
+                <tr><td>operator=</td><td colspan="2">O(n)</td><td>O(1)</td></tr>
+              </table>
             </div>
           </div>
         </div>
@@ -169,7 +389,7 @@
           <span class="char btnchar back-page">[Back]</span> <a class="char btnchar" href="#" target="_blank">[Source]</a>
 
           <div class="card" style="background-color:#2d2d30;">
-            <span style="margin:auto 0; font-size:25px; color:rgb(53, 175, 212);">Declare and use</span>
+            <span class="title" style="color:rgb(53, 175, 212);">Declare and use</span>
 
             <img class="button-show" src="Picture/flicker.png" style="height:40px; width:40px;"><br>
             <div class="box-show hidden char">
