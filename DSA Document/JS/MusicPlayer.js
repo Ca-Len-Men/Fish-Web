@@ -24,7 +24,10 @@ const listMusic = [
   ["Overlord SS2", "Overlord Opening II"],
   ["Overlord SS3", "Overlord Opening III"],
   ["Overlord SS4", "Overlord Opening IV"],
-  ["Owari no Seraph OP 1", "Owari no Seraph Opening"]
+  ["Owari no Seraph OP 1", "Owari no Seraph Opening"],
+  ["Love Is War", "Love Is War SS1"],
+  ["Love Is War 2", "Love Is War SS2"],
+  ["One Punch Man", "One Punch Man"]
 ];
 
 songs.textContent = ''
