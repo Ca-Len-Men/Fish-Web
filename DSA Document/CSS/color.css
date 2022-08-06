@@ -69,3 +69,16 @@
     background-color:#4a94d2;
     color:black;
 }
+
+.syntax{
+    color:#d79edc;
+}
+
+.btnold-type:hover{
+    background-color:#d79edc;
+    color:black;
+}
+
+.warning{
+    color:#ffa407;
+}
